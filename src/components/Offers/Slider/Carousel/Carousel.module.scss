@@ -1,0 +1,25 @@
+@import "var.scss";
+
+.wrapOuter {
+    width: 20000px;
+    overflow: hidden;
+    position: relative;
+    top: 70px;
+
+    @media (max-width: 900px) {
+        top: 0;
+        margin-top: 30px;
+    }
+}
+
+.wrap {
+    width: 1209px;
+
+    @media (max-width: 1120px) {
+        width: calc(3 * 240px + 2 * 23px);
+    }
+
+    @media (max-width: 900px) {
+        width: calc(100vw - 2 * #{$pagePadding});
+    }
+}

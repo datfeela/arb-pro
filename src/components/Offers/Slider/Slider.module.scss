@@ -1,0 +1,46 @@
+@import "var.scss";
+
+.wrap{
+    display: grid;
+    width: 100%;
+    max-width: calc(#{$centerAreaMaxSize} + 2*#{$pagePadding});
+    padding: 0 $pagePadding;
+    grid-template-columns: 5fr 7fr;
+    margin: 0 auto;
+
+    @media (max-width: 900px) {
+        padding: 30px $pagePadding;
+        grid-template-columns: 1fr;
+    }
+}
+
+.articleWrap{
+    margin-right: 120px;
+
+    h2{
+        line-height: 130%;
+        position: relative;
+        top: 50px;
+        padding: 0;
+    }
+
+    @media (max-width: 1400px) {
+        margin-right: 80px;
+    }
+
+    @media (max-width: 1120px) {
+        margin-right: 50px;
+    }
+
+    @media (max-width: 900px) {
+        h2{
+            top: 0;
+            width: 100vw;
+            display: flex;
+            flex-wrap: wrap;
+            span{
+                margin-right: 10px;
+            }
+        }
+    }
+} 

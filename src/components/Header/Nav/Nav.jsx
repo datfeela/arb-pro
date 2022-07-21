@@ -3,8 +3,8 @@ import { Theme } from "../../../assets/styled/theme";
 
 export const Nav = ({ items }) => {
     const navLinks = items.map((item) => {
-        if (item.name === "Стратегия") {return <LinkActive href={item.link}>{item.name}</LinkActive>;}
-        else return <Link href={item.link}>{item.name}</Link>
+        // if (item.name === "Стратегия") {return <LinkActive href={item.link}>{item.name}</LinkActive>;} else
+        return <Link href={item.link}>{item.name}</Link>;
     });
 
     return <NavWrap>{navLinks}</NavWrap>;

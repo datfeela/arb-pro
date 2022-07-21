@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Layout, Theme } from "../../../assets/styled/theme";
+import { List } from "../../_generic/List/List";
 
 export const Stage = ({ data }) => {
     return (
@@ -8,20 +9,12 @@ export const Stage = ({ data }) => {
                 <IdSpan>{data.id}</IdSpan>
                 <TitleText>{data.title}</TitleText>
             </Title>
-            <DescWrap>
-                {data.desc.map((item) => (
-                    <DescItem>
-                        <DescCircle />
-                        <DescText>{item}</DescText>
-                    </DescItem>
-                ))}
-            </DescWrap>
+            <List items={data.desc}/>
         </Wrap>
     );
 };
 
 const Wrap = styled.div`
-    /* display: flex; */
     display: grid;
     grid-template-columns: 2fr 3fr;
     align-items: flex-start;
@@ -38,13 +31,12 @@ const Wrap = styled.div`
     }
 `;
 
-
-
 const Title = styled.div`
     display: flex;
     margin-right: 1.3em;
     @media (max-width: 850px) {
         margin-bottom: 1em;
+        margin-right: 0;
     }
 `;
 
@@ -77,7 +69,7 @@ const IdSpan = styled.span`
     }
 `;
 
-const TitleText = styled.span`
+const TitleText = styled.h3`
     font-size: 30px;
     line-height: 167%;
     font-weight: 600;
@@ -90,29 +82,3 @@ const TitleText = styled.span`
         font-size: 22px;
     }
 `;
-
-const DescWrap = styled.div`
-    /* min-width: 61.3%;
-    width: 61.3%; */
-    display: flex;
-    flex-direction: column;
-`;
-
-const DescItem = styled.div`
-    display: flex;
-    align-items: flex-start;
-    margin: 10px 0px;
-`;
-
-const DescCircle = styled.span`
-    display: inline-block;
-    margin: 10.5px 15px 0 0;
-    height: 7px;
-    min-width: 7px;
-    width: 7px;
-    background-color: ${Theme.redColor};
-    border-radius: 50%;
-`;
-
-
-const DescText = styled.span``;

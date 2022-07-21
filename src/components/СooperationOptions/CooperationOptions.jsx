@@ -3,11 +3,16 @@ import styled from "styled-components";
 import { Layout } from "../../assets/styled/theme";
 import { AppContext } from "../../context";
 import { ArticleTitle } from "../_generic/ArticleTitle/ArticleTitle";
-import { Stage } from "./Stage/Stage";
+import { Option } from "./Option/Option";
 
-export const Stages = () => {
-    const data = useContext(AppContext).state.stages;
-    const blocks = data.blocks.map((block) => <Stage key={block.id} data={block} />);
+export const CooperationOptions = () => {
+    const data = useContext(AppContext).state.cooperation;
+    let isReversed = false;
+    const blocks = data.blocks.map((block) => {
+        const reversed = isReversed;
+        isReversed = !isReversed;
+        return <Option key={block.id} data={block} reversed={reversed} />;
+    });
 
     return (
         <Wrap>
@@ -30,7 +35,7 @@ const Wrap = styled.div`
 const WrapInner = styled.div`
     max-width: calc(${Layout.centerAreaMaxSize} + 2 * ${Layout.pagePadding});
     margin: 0 auto;
-    padding-bottom: 100px;
+    padding: 100px 0;
 `;
 
 const ArticleWrap = styled.div`

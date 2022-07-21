@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { Layout } from './theme';
+import { Layout, Theme } from './theme';
 
 export default createGlobalStyle`
 * {
@@ -7,6 +7,7 @@ export default createGlobalStyle`
   margin: 0;
   border: 0;
   letter-spacing: -0.015em;
+  color: ${Theme.fontColor};
 }
 *, 
 *:before,
@@ -33,6 +34,7 @@ aside {
 
 html,
 body {
+  background: #F5F5F5;
   height: 100%;
   width: 100%;
   font-size: 100%;

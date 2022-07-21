@@ -1,0 +1,64 @@
+{
+    "header": {
+        "nav": [
+            { "name": "Стратегия", "link": "https://arb-pro.ru/strategy/" },
+            { "name": "Финансы", "link": "https://arb-pro.ru/finance/" },
+            { "name": "Маркетинг", "link": "https://arb-pro.ru/marketing/" },
+            { "name": "Технологии", "link": "https://arb-pro.ru/technologies/" },
+            { "name": "Семинары и вебинары", "link": "https://arb-pro.ru/events/" },
+            { "name": "Исследования", "link": "https://arb-pro.ru/research/" },
+            { "name": "Публикации", "link": "https://arb-pro.ru/news/" }
+        ],
+        "buttonText": "Оставить заявку"
+    },
+    "footer": {
+        "nav": {
+            "title": "Что делаем",
+            "items": [
+                { "title": "Корпоративная стратегия", "link": "https://arb-pro.ru/strategy/" },
+                { "title": "Экономика компании", "link": "https://arb-pro.ru/finance/" },
+                { "title": "Маркетинг и продажи", "link": "https://arb-pro.ru/marketing/" },
+                { "title": "Технологии для бизнеса", "link": "https://arb-pro.ru/technologies/" },
+                { "title": "Исследования и обзоры", "link": "https://arb-pro.ru/research/" },
+                { "title": "Семинары и вебинары", "link": "https://arb-pro.ru/events/" },
+                { "title": "Базовые стратегии", "link": "https://arb-pro.ru/events/bs21/" }
+            ]
+        },
+        "navAbout": {
+            "title": "Кто мы",
+            "items": [
+                { "title": "О нас", "link": "https://arb-pro.ru/about-us/" },
+                { "title": "Команда", "link": "https://arb-pro.ru/about-us/#employees" },
+                { "title": "Контакты", "link": "https://arb-pro.ru/contact/" },
+                { "title": "Публикации", "link": "https://arb-pro.ru/news/" }
+            ]
+        },
+        "contacts": {
+            "phone": { "title": "+7 (812) 770-21-69", "link": "tel:+78127478216" },
+            "email": { "title": "strategy@arb-pro.ru", "link": "mailto:strategy@arb-pro.ru" },
+            "socials": {
+                "WA": "https://wa.me/message/IVYD6GWSOPFYJ1",
+                "TG": "https://t.me/arb_pro",
+                "YT": "https://www.youtube.com/user/TrainingInstARBPro",
+                "VK": "https://vk.com/arbpro_consult"
+            }
+        },
+        "docs": {
+            "booklet": {
+                "title": ["Скачать буклет", "АРБ Про"],
+                "link": "https://arb-pro.ru/upload/%D0%9A%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3_%D0%90%D0%A0%D0%91_%D0%9F%D1%80%D0%BE_2022.pdf"
+            },
+            "logo": {
+                "title": ["Скачать логотип", "АРБ Про"],
+                "link": "https://arb-pro.ru/upload/Logo-ARB-Pro.rar"
+            }
+        },
+        "license": {
+            "copyright": "© ГК «Институт Тренинга - АРБ Про», 2022",
+            "privacy": {
+                "title": "Политика конфиденциальности",
+                "link": "https://arb-pro.ru/soglashenie/"
+            }
+        }
+    }
+}

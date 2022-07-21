@@ -1,0 +1,49 @@
+@import "var.scss";
+
+.wrap {
+    position: relative;
+}
+
+.textWrap {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    display: flex;
+}
+
+.circle {
+    margin: 3px 8px 0 0;
+    display: block;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: $redColor;
+}
+
+.name, .surname {
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.image{
+    width: 290px;
+
+    @media (max-width: 1120px) {
+        width: 240px;
+    }
+
+    @media (max-width: 900px) {
+        width: 200px;
+    }
+
+    @media (max-width: 480px) {
+        width: 290px;
+    }
+
+    @media (max-width: 390px) {
+        width: 250px;
+    }
+}
