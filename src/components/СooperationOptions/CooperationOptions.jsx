@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import styled from "styled-components";
-import { Layout } from "../../assets/styled/theme";
+import s from "./CooperationOptions.module.scss";
 import { AppContext } from "../../context";
 import { ArticleTitle } from "../_generic/ArticleTitle/ArticleTitle";
 import { Option } from "./Option/Option";
+import { Form } from "./Form/Form";
 
 export const CooperationOptions = () => {
     const data = useContext(AppContext).state.cooperation;
@@ -15,41 +15,20 @@ export const CooperationOptions = () => {
     });
 
     return (
-        <Wrap>
-            <WrapInner>
-                <ArticleWrap>
+        <div className={s.wrap}>
+            <div className={s.wrapInner}>
+                <div className={s.titleWrap}>
                     <ArticleTitle title={data.title} />
-                </ArticleWrap>
-                <div>{blocks}</div>
-            </WrapInner>
-        </Wrap>
+                </div>
+                <div className={s.blocksWrap}>{blocks}</div>
+                <Form
+                    title={data.form.title}
+                    fields={data.form.fields}
+                    btnText={data.form.submitBtn}
+                    submitDesc={data.form.submitDesc}
+                    addInfo={data.form.circleInfo}
+                />
+            </div>
+        </div>
     );
 };
-
-const Wrap = styled.div`
-    max-width: 1936px;
-    margin: 0 auto;
-    background: #fff;
-`;
-
-const WrapInner = styled.div`
-    max-width: calc(${Layout.centerAreaMaxSize} + 2 * ${Layout.pagePadding});
-    margin: 0 auto;
-    padding: 100px 0;
-`;
-
-const ArticleWrap = styled.div`
-    margin-bottom: 60px;
-
-    @media (max-width: 1120px) {
-        margin-bottom: 40px;
-    }
-
-    @media (max-width: 768px) {
-        margin-bottom: 30px;
-    }
-
-    @media (max-width: 480px) {
-        margin-bottom: 20px;
-    }
-`;

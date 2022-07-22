@@ -79,7 +79,27 @@
             }
         ],
         "form": {
-            "title": "Обсудить ваш вариант"
+            "title": "Обсудить ваш вариант",
+            "fields": {
+                "name": {
+                    "placeholder": "Имя"
+                },
+                "phone": {
+                    "placeholder": "Телефон"
+                }
+            },
+            "submitBtn": "Обсудить",
+            "submitDesc": {
+                "text": "Нажимая кнопку, принимаю условия ",
+                "link": {
+                    "text": "политики и пользовательского соглашения",
+                    "href": "https://arb-pro.ru/soglashenie/"
+                }
+            },
+            "circleInfo": {
+                "title": "Андрей Ванин",
+                "desc": "менеджер по продажам АРБ Про"
+            }
         }
     },
     "stages": {

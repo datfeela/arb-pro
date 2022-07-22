@@ -26,8 +26,8 @@ export const Carousel = ({ slides }) => {
                         delay: 3500,
                         disableOnInteraction: false,
                     }}
-                    onSlideChange={() => console.log("slide change")}
-                    onSwiper={(swiper) => console.log(swiper)}
+                    // onSlideChange={() => console.log("slide change")}
+                    // onSwiper={(swiper) => console.log(swiper)}
                     breakpoints={{
                         480: {
                             slidesPerView: 2,

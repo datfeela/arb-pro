@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AppContext } from "../../context";
 import { Slider } from "./Slider/Slider";
 import s from "./Offers.module.scss";
+import { OffersList } from "./OffersList/OffersList";
 
 export const Offers = () => {
     const sliderData = useContext(AppContext).state.topSlider;
@@ -15,7 +16,7 @@ export const Offers = () => {
             </div>
             <div className={s.wrap + ' ' + s.green}>
                 <div className={s.wrapInner}>
-                    <div className={s.ph} />
+                    <OffersList data={data} />
                 </div>
             </div>
         </>

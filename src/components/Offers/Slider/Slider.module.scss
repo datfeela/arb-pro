@@ -12,10 +12,14 @@
         padding: 30px $pagePadding;
         grid-template-columns: 1fr;
     }
+
+    @media (max-width: 480px) {
+        padding: 20px $pagePadding480;
+    }
 }
 
 .articleWrap{
-    margin-right: 120px;
+    margin-right: 200px;
 
     h2{
         line-height: 130%;
@@ -25,7 +29,7 @@
     }
 
     @media (max-width: 1400px) {
-        margin-right: 80px;
+        margin-right: 110px;
     }
 
     @media (max-width: 1120px) {

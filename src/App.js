@@ -31,7 +31,8 @@ function App() {
           <Header />
           <Main>
             <Offers/>
-            <CooperationOptions/>
+            <CooperationOptions />
+            <PH/>
             <Stages />
           </Main>
           <Footer/>
@@ -44,8 +45,25 @@ function App() {
 
 export default App;
 
+const PH = styled.div`
+  height: 400px;
+  width: 100%;
+`
+
 const Main = styled.main`
   margin-top: ${Layout.headerHeight};
+
+  @media (max-width: 1120px) {
+      margin-top: ${Layout.headerHeight1120};
+  }
+
+  @media (max-width: 768px) {
+      margin-top: ${Layout.headerHeight768};
+  }
+
+  @media (max-width: 480px) {
+      margin-top: ${Layout.headerHeight480};
+  }
 `
 
 

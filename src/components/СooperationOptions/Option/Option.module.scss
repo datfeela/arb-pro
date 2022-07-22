@@ -1,0 +1,118 @@
+@import "var.scss";
+
+.image {
+    grid-area: img;
+    margin-top: 10px;
+    width: 100%;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.contentWrap {
+    display: flex;
+
+    &.titleWrap {
+        grid-area: title;
+    }
+
+    &.content {
+        grid-area: content;
+    }
+
+    @media (max-width: 1080px) {
+        &.titleWrap {
+            margin: 0 0 20px 0;
+        }
+
+        &.content {
+            margin: 0 0 0 7px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        &.content {
+            span {
+                font-size: "16px";
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        &.content {
+            span {
+                font-size: "15px";
+            }
+        }
+    }
+}
+
+.idSpan {
+    display: block;
+    margin: 14px 40px 0px 0px;
+    font-size: 56px;
+    font-weight: 700;
+    color: $redColor;
+
+    &.empty {
+        color: transparent;
+    }
+
+    @media (max-width: 1120px) {
+        font-size: 40px;
+        margin: 8px 25px 0 0;
+    }
+
+    @media (max-width: 1080px) {
+        &.empty {
+            display: none;
+        }
+    }
+
+    @media (max-width: 768px) {
+        font-size: 34px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 28px;
+    }
+}
+
+.title {
+    margin-bottom: 20px;
+    font-size: $subtitleFont;
+    font-weight: 600;
+    line-height: 130%;
+    color: #000;
+
+    @media (max-width: 1120px) {
+        font-size: $subtitleFont1120;
+    }
+
+    @media (max-width: 1080px) {
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 24px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: $subtitleFont480;
+    }
+}
+
+.titleText {
+    font-size: $subtitleFont;
+    line-height: 167%;
+    font-weight: 600;
+
+    @media (max-width: 1120px) {
+        font-size: $subtitleFont1120;
+    }
+
+    @media (max-width: 480px) {
+        font-size: $subtitleFont480;
+    }
+}

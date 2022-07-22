@@ -1,5 +1,14 @@
 export const SvgSelector = ({ type }) => {
     switch (type) {
+        case "warning":
+            return (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28">
+                    <g fillRule="evenodd">
+                        <path d="M0 0h28v28H0z" fill="none"></path>
+                        <path d="M3 14C3 7.928 7.928 3 14 3s11 4.928 11 11-4.928 11-11 11S3 20.072 3 14zm11-9.2c-5.078 0-9.2 4.122-9.2 9.2 0 5.078 4.122 9.2 9.2 9.2 5.078 0 9.2-4.122 9.2-9.2 0-5.078-4.122-9.2-9.2-9.2zm-1 9.7v-5a1 1 0 012 0v5a1 1 0 01-2 0zm-.25 3.75A1.25 1.25 0 1114 19.5c-.69 0-1.25-.56-1.25-1.25z"></path>
+                    </g>
+                </svg>
+            );
         case "headerLogo":
             return (
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 142 29" fill="none">
@@ -53,7 +62,7 @@ export const SvgSelector = ({ type }) => {
         case "footer-logo":
             return (
                 <svg xmlns="http://www.w3.org/2000/svg" width="174" height="66" viewBox="0 0 174 66" fill="none">
-                    <g clip-path="url(#clip0_30_125)">
+                    <g clipPath="url(#clip0_30_125)">
                         <path
                             d="M5.7994 0.758342V7.97266H6.64902V0.0849609H5.28564L0.931106 7.3741V0.0849609H0.0814819V7.97266H1.42991L5.7994 0.758342Z"
                             fill="white"
@@ -251,8 +260,8 @@ export const SvgSelector = ({ type }) => {
                         fill="white"
                     />
                     <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M21.3125 0H2C0.895431 0 0 0.89543 0 2V33C0 34.1046 0.89543 35 2 35H29C30.1046 35 31 34.1046 31 33V8.5L21.3125 0ZM26.8279 7.5L22.3125 3.53814V6.5C22.3125 7.05229 22.7602 7.5 23.3125 7.5H26.8279ZM20.3125 2L2 2V33H29V9.5H23.3125C21.6556 9.5 20.3125 8.15685 20.3125 6.5V2Z"
                         fill="#D6001C"
                     />
@@ -263,14 +272,14 @@ export const SvgSelector = ({ type }) => {
                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="32" viewBox="0 0 17 32" fill="none">
                     <path d="M0 28H17V32H0V28Z" fill="#D6001C" />
                     <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M8.49999 21.5C8.08289 21.5 7.68462 21.3263 7.4008 21.0207L0.900803 14.0207C0.337098 13.4136 0.37225 12.4645 0.979317 11.9008C1.58638 11.3371 2.53548 11.3723 3.09918 11.9793L8.49999 17.7956L13.9008 11.9793C14.4645 11.3723 15.4136 11.3371 16.0207 11.9008C16.6277 12.4645 16.6629 13.4136 16.0992 14.0207L9.59918 21.0207C9.31536 21.3263 8.9171 21.5 8.49999 21.5Z"
                         fill="white"
                     />
                     <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M8.5 0.5C9.32843 0.5 10 1.17157 10 2V20C10 20.8284 9.32843 21.5 8.5 21.5C7.67157 21.5 7 20.8284 7 20V2C7 1.17157 7.67157 0.5 8.5 0.5Z"
                         fill="white"
                     />

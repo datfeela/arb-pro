@@ -11,7 +11,7 @@
 }
 
 .wrapInner{
-    max-width: calc($centerAreaMaxSize + 2 * $pagePadding);
+    max-width: calc(#{$centerAreaMaxSize} + 2 * #{$pagePadding});
     margin: 0 auto;
 }
 

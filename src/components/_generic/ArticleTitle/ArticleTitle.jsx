@@ -3,14 +3,16 @@ import { Theme } from "../../../assets/styled/theme";
 import { TitleStyled } from "../../../assets/styled/common";
 
 export const ArticleTitle = ({ title }) => {
-    const titleText = title.map((item) => {
-        return (
-            <>
-                <Span color={item.color ? item.color : "black"}>{item.text}</Span>
-                {item.br && item.br === true && <br />}
-            </>
-        );
-    });
+    const titleText = title && title[0]
+        ? title.map((item) => {
+              return (
+                  <>
+                      <Span color={item.color ? item.color : "black"}>{item.text}</Span>
+                      {item.br && item.br === true && <br />}
+                  </>
+              );
+          })
+        : "";
 
     return <TitleStyled>{titleText}</TitleStyled>;
 };

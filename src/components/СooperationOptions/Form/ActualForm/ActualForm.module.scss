@@ -1,0 +1,59 @@
+@import "var.scss";
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.inputWrap {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid $greenColor;
+
+    input {
+        width: 100%;
+        padding: 0 20px;
+        background-color: transparent;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+
+        &:autofill {
+            box-shadow: 0 0 0 30px #2f2c27 inset !important;
+            -webkit-text-fill-color: #fff !important;
+            caret-color: #fff;
+        }
+
+        &::placeholder {
+            color: $swampColor;
+        }
+    }
+}
+
+.button {
+    height: 68px;
+    background-color: $redColor;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 125%;
+}
+
+.submitDesc {
+    color: #707070;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 155%;
+
+    a {
+        color: #707070;
+        text-decoration: underline;
+    }
+}
+
+// .errorWrapAbsolute {
+// }

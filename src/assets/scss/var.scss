@@ -1,23 +1,35 @@
-$fontColor: #2F2C27;
-$redColor: #D6001C;
-$lightRedColor: #F4364C;
-$swampColor: #A4BDBA;
+// colors
+$fontColor: #2f2c27;
+$redColor: #d6001c;
+$lightRedColor: #f4364c;
+$swampColor: #a4bdba;
 $darkGreenColor: #007367;
-$greenColor: #00ACA8;
+$greenColor: #00aca8;
+$lightGreenColor: #8cf3e7;
 $footerFontColor: #d9d9d9;
 
+// layout
 $scrollbarWidth: 16px;
 $scrollbarWidth1120: 16px;
 $scrollbarWidth768: 14px;
 $maxContentWidth: 1680px;
 $centerAreaMaxSize: 1200px;
 $pagePadding: 22px;
-$pagePaddingLowRes: 12px;
 $headerHeight: 60px;
-$headerHeight1120: 44px;
-$headerHeight768: 38.8px;
-$headerHeight480: 34.5px;
+$titleFont: 56px;
+$subtitleFont: 30px;
 
-@media (max-width: 480px) {
-    $pagePadding: 12px;
-}
+// 1120
+$titleFont1120: 40px;
+$headerHeight1120: 44px;
+$subtitleFont1120: 25px;
+
+// 768
+$titleFont768: 34px;
+$headerHeight768: 38.8px;
+
+// 480
+$titleFont480: 28px;
+$pagePadding480: 12px;
+$headerHeight480: 34.5px;
+$subtitleFont480: 22px;
