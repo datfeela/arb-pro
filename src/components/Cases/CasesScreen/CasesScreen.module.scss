@@ -1,0 +1,10 @@
+@import "var.scss";
+
+.wrap{
+    height: 530px;
+    background-color: $footerFontColor;
+
+    @media (max-width: 1120px) {
+        height: 45vw;
+    }
+}

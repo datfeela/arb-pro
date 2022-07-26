@@ -10,6 +10,8 @@ import { StrategyMeaning } from './components/StrategyMeaning/StrategyMeaning';
 import { CooperationOptions } from './components/СooperationOptions/CooperationOptions';
 import { AppContext } from './context';
 import { Tools } from "./components/Tools/Tools";
+import { Cases } from "./components/Cases/Cases";
+import { Feedback } from "./components/Feedback/Feedback";
 
 function App() {
   const context = useContext(AppContext);
@@ -31,14 +33,16 @@ function App() {
         {context.state.loaded === true && <>
           <Header />
           <main>
-            <Offers/>
+            <Offers />
             <CooperationOptions />
             <StrategyMeaning />
             <Advantages />
-            <Tools/>
+            <Tools />
+            <Cases />
             <Stages />
+            <Feedback />
           </main>
-          <Footer/>
+          <Footer />
         </>}
       </div>
     </>

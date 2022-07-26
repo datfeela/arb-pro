@@ -158,8 +158,45 @@
             { "id": 9, "icon": "arrowFilled", "text": "Карта Customer Touchpoint" }
         ]
     },
-    "cases": {},
-    "feedback": {},
+    "cases": {
+        "title": [
+            { "color": "red", "text": "Примеры стратегий,", "br": true },
+            { "color": "black", "text": "разработанных АРБ Про" }
+        ],
+        "footerText": [
+            { "text": "АРБ Про превратит ваши ожидания, желания и амбиции в " },
+            { "text": "обоснованную и реалистичную программу действий", "bold": true }
+        ]
+    },
+    "feedback": {
+        "title": [
+            { "color": "red", "text": "Отзывы " },
+            { "color": "black", "text": "клиентов" }
+        ],
+        "items": [
+            {
+                "id": "1",
+                "name": "Александр Александров",
+                "desc": "Менеджер корпоративного обучения, Сбер Банк",
+                "text": "На руки вы получите стратегию с рыночным обоснованием, карту рынка, карту стратегических альтернатив, диагностику экономического состояния компании, план действий с этапами, задачами, метриками, прописанными барьерами, рисками и шагами. Сверх того — с вами навсегда останется технология составления стратегии. ",
+                "textExtended": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nulla aperiam excepturi illum accusamus tempora voluptate culpa blanditiis amet voluptatem. Quae dolor quisquam saepe cupiditate. Voluptatibus earum at molestiae magnam possimus distinctio delectus. Dolorum debitis aliquid modi saepe quod veniam eligendi? Laudantium ducimus et, ratione harum impedit maxime dolores, ullam deleniti totam, tempore alias quos reiciendis aliquam earum delectus eveniet similique consequatur? Itaque necessitatibus in fugit voluptate numquam! Culpa molestias, nostrum magnam alias, ea ipsum officiis maiores architecto itaque debitis assumenda, voluptas reiciendis fugit esse et quisquam quae suscipit praesentium nam quam minima. Sapiente voluptates incidunt dolorem nobis, eius id?"
+            },
+            {
+                "id": "2",
+                "name": "Александр Александров",
+                "desc": "Менеджер корпоративного обучения, Сбер Банк",
+                "text": "На руки вы получите стратегию с рыночным обоснованием, карту рынка, карту стратегических альтернатив, диагностику экономического состояния компании, план действий с этапами, задачами, метриками, прописанными барьерами, рисками и шагами. Сверх того — с вами навсегда останется технология составления стратегии. ",
+                "textExtended": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nulla aperiam excepturi illum accusamus tempora voluptate culpa blanditiis amet voluptatem. Quae dolor quisquam saepe cupiditate. Voluptatibus earum at molestiae magnam possimus distinctio delectus. Dolorum debitis aliquid modi saepe quod veniam eligendi?"
+            },
+            {
+                "id": "3",
+                "name": "Александр Александров",
+                "desc": "Менеджер корпоративного обучения, Сбер Банк",
+                "text": "На руки вы получите стратегию с рыночным обоснованием, карту рынка, карту стратегических альтернатив, диагностику экономического состояния компании, план действий с этапами, задачами, метриками, прописанными барьерами, рисками и шагами. Сверх того — с вами навсегда останется технология составления стратегии. ",
+                "textExtended": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nulla aperiam excepturi illum accusamus tempora voluptate culpa blanditiis amet voluptatem. Quae dolor quisquam saepe cupiditate. Voluptatibus earum at molestiae magnam possimus distinctio delectus. Dolorum debitis aliquid modi saepe quod veniam eligendi? Laudantium ducimus et, ratione harum impedit maxime dolores, ullam deleniti totam, tempore alias quos reiciendis aliquam earum delectus eveniet similique consequatur? Itaque necessitatibus in fugit voluptate numquam! Culpa molestias, nostrum magnam alias, ea ipsum officiis maiores architecto itaque debitis assumenda, voluptas reiciendis fugit esse et quisquam quae suscipit praesentium nam quam minima. Sapiente voluptates incidunt dolorem nobis, eius id?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nulla aperiam excepturi illum accusamus tempora voluptate culpa blanditiis amet voluptatem. Quae dolor quisquam saepe cupiditate. Voluptatibus earum at molestiae magnam possimus distinctio delectus. Dolorum debitis aliquid modi saepe quod veniam eligendi? Laudantium ducimus et, ratione harum impedit maxime dolores, ullam deleniti totam, tempore alias quos reiciendis aliquam earum delectus eveniet similique consequatur? Itaque necessitatibus in fugit voluptate numquam! Culpa molestias, nostrum magnam alias, ea ipsum officiis maiores architecto itaque debitis assumenda, voluptas reiciendis fugit esse et quisquam quae suscipit praesentium nam quam minima. Sapiente voluptates incidunt dolorem nobis, eius id?"
+            }
+        ]
+    },
     "about": {},
     "team": {},
     "contact": {},

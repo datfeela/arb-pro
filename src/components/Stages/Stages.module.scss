@@ -1,11 +1,21 @@
 @import "var.scss";
 
+$screenRunover: 170px;
+$screenRunover768: 100px;
+
 .wrap {
     background: #fff;
-}
+    margin-top: -$screenRunover;
+    padding: 100px 0;
 
-.wrapInner {
-    padding-bottom: 100px;
+    @media (max-width: 1120px) {
+        padding: 60px 0;
+    }
+
+    @media (max-width: 768px) {
+        margin-top: -$screenRunover768;
+        padding: 40px 0 15px 0;
+    }
 }
 
 .wrapTitle {

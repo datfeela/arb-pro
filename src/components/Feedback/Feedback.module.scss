@@ -1,0 +1,35 @@
+@import "var.scss";
+
+.wrap {
+    background: #fff;
+    padding-bottom: 120px;
+
+    @media (max-width: 1120px) {
+        padding-bottom: 70px;
+    }
+
+    @media (max-width: 768px) {
+        padding-bottom: 40px;
+    }
+}
+
+.titleWrap {
+    margin-bottom: 65px;
+
+    @media (max-width: 1120px) {
+        margin-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+        margin-bottom: 25px;
+    }
+}
+
+.content{
+    display: flex;
+}
+
+.items_wrap{
+    margin-right: 120px;
+    flex-grow: 1;
+}
