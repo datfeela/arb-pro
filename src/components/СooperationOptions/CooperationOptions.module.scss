@@ -1,14 +1,10 @@
 @import "var.scss";
 
 .wrap {
-    max-width: 1936px;
-    margin: 0 auto;
     background: #fff;
 }
 
 .wrapInner {
-    max-width: calc(#{$centerAreaMaxSize} + 2 * #{$pagePadding});
-    margin: 0 auto;
     padding-top: 100px;
 
     @media (max-width: 1120px) {
@@ -33,5 +29,11 @@
 
     @media (max-width: 480px) {
         margin-bottom: 20px;
+    }
+}
+
+.blocksWrap{
+    @media (max-width: 768px) {
+        padding-bottom: 40px;
     }
 }

@@ -8,15 +8,15 @@ import { Form } from "./Form/Form";
 export const CooperationOptions = () => {
     const data = useContext(AppContext).state.cooperation;
     let isReversed = false;
-    const blocks = data.blocks.map((block) => {
+    const blocks = data.list.map((block) => {
         const reversed = isReversed;
         isReversed = !isReversed;
         return <Option key={block.id} data={block} reversed={reversed} />;
     });
 
     return (
-        <div className={s.wrap}>
-            <div className={s.wrapInner}>
+        <div className={s.wrap + " wrap"}>
+            <div className={s.wrapInner + " wrapInner"}>
                 <div className={s.titleWrap}>
                     <ArticleTitle title={data.title} />
                 </div>

@@ -1,14 +1,15 @@
+import "./App.scss";
 import axios from 'axios';
 import { useContext, useEffect } from 'react';
-import styled from 'styled-components';
-import GlobalStyles from './assets/styled/global';
-import { Layout } from './assets/styled/theme';
+import { Advantages } from './components/Advantages/Advantages';
 import { Footer } from './components/Footer/Footer';
 import { Header } from './components/Header/Header';
 import { Offers } from './components/Offers/Offers';
 import { Stages } from './components/Stages/Stages';
+import { StrategyMeaning } from './components/StrategyMeaning/StrategyMeaning';
 import { CooperationOptions } from './components/СooperationOptions/CooperationOptions';
 import { AppContext } from './context';
+import { Tools } from "./components/Tools/Tools";
 
 function App() {
   const context = useContext(AppContext);
@@ -29,41 +30,19 @@ function App() {
         {context.state.loaded === false && <div></div>}
         {context.state.loaded === true && <>
           <Header />
-          <Main>
+          <main>
             <Offers/>
             <CooperationOptions />
-            <PH/>
+            <StrategyMeaning />
+            <Advantages />
+            <Tools/>
             <Stages />
-          </Main>
+          </main>
           <Footer/>
         </>}
       </div>
-      <GlobalStyles></GlobalStyles>
     </>
   );
 }
 
 export default App;
-
-const PH = styled.div`
-  height: 400px;
-  width: 100%;
-`
-
-const Main = styled.main`
-  margin-top: ${Layout.headerHeight};
-
-  @media (max-width: 1120px) {
-      margin-top: ${Layout.headerHeight1120};
-  }
-
-  @media (max-width: 768px) {
-      margin-top: ${Layout.headerHeight768};
-  }
-
-  @media (max-width: 480px) {
-      margin-top: ${Layout.headerHeight480};
-  }
-`
-
-

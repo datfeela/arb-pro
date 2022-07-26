@@ -1,14 +1,10 @@
 @import "var.scss";
 
 .wrap {
-    max-width: 1936px;
-    margin: 0 auto;
     background: #fff;
 }
 
 .wrapInner {
-    max-width: calc(#{$centerAreaMaxSize} + 2 * #{$pagePadding});
-    margin: 0 auto;
     padding-bottom: 100px;
 }
 

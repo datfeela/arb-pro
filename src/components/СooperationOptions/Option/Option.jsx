@@ -20,7 +20,6 @@ export const Option = ({ data, reversed }) => {
 };
 
 const Wrap = styled.div`
-    padding: 0 ${Layout.pagePadding};
     margin-bottom: 90px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -56,14 +55,13 @@ const Wrap = styled.div`
         grid-template-columns: 1fr;
         grid-template-areas:
             "title"
-            "content";
+            "content"
+            "img";
         margin-bottom: 20px;
         padding-top: 20px;
-        border-top: 1px solid ${Theme.swampColor};
     }
 
     @media (max-width: 480px) {
-        padding: 0 ${Layout.pagePaddingLowRes};
         margin-bottom: 15px;
         padding-top: 15px;
     }

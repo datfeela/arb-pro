@@ -1,0 +1,161 @@
+@import "var.scss";
+
+.wrap {
+    padding: 330px $pagePadding 110px $pagePadding;
+
+    @media (max-width: 1120px) {
+        padding: 250px $pagePadding 50px $pagePadding;
+    }
+
+    @media (max-width: 768px) {
+        padding: 50px $pagePadding 20px $pagePadding;
+    }
+
+    @media (max-width: 480px) {
+        padding: 30px $pagePadding480 0 $pagePadding480;
+    }
+}
+
+.wrapInnerTop {
+    margin-bottom: 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 60px;
+    grid-template-areas:
+        "img title"
+        "img desc";
+
+    @media (max-width: 1120px) {
+        margin-bottom: 70px;
+    }
+
+    @media (max-width: 900px) {
+        margin-bottom: 50px;
+        grid-template-rows: unset;
+        grid-template-areas:
+            "title title"
+            "img desc";
+        grid-column-gap: 25px;
+    }
+
+    @media (max-width: 640px) {
+        display: block;
+    }
+
+    @media (max-width: 480px) {
+        margin-bottom: 25px;
+    }
+}
+
+.image {
+    grid-area: img;
+
+    @media (max-width: 1120px) {
+        width: calc(50vw - #{$pagePadding} - 30px);
+    }
+
+    @media (max-width: 900px) {
+        width: calc(55vw - #{$pagePadding} - 10px);
+    }
+
+    @media (max-width: 640px) {
+        width: 75vw;
+        margin-bottom: 7px;
+    }
+
+    @media (max-width: 480px) {
+        width: 90vw;
+    }
+}
+
+.titleWrap {
+    grid-area: title;
+    margin-bottom: 25px;
+
+    h2 {
+        padding: 0;
+    }
+
+    @media (max-width: 640px) {
+        margin-bottom: 15px;
+    }
+}
+
+.desc {
+    grid-area: desc;
+}
+
+.wrapInnerBot {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 60px;
+
+    @media (max-width: 1120px) {
+    }
+
+    @media (max-width: 900px) {
+        grid-column-gap: 25px;
+    }
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+
+    @media (max-width: 480px) {
+    }
+}
+
+.subtitle {
+    margin: 0 60px 20px 0;
+    font-size: $subtitleFont;
+    font-weight: 600;
+    line-height: 130%;
+    color: #000;
+
+    span.subtitle__text_red {
+        color: $redColor;
+    }
+
+    @media (max-width: 1120px) {
+        font-size: $subtitleFont1120;
+    }
+
+    @media (max-width: 1080px) {
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+        margin: 0 0 30px 0;
+        font-size: 24px;
+    }
+
+    @media (max-width: 640px) {
+        margin-right: 0;
+    }
+
+    @media (max-width: 480px) {
+        font-size: $subtitleFont480;
+    }
+}
+
+.text {
+    font-size: 20px;
+    line-height: 150%;
+
+    @media (max-width: 1120px) {
+        font-size: 18px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 15px;
+    }
+}
+
+.textBold {
+    font-weight: 700;
+}

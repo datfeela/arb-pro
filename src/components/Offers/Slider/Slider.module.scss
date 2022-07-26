@@ -4,17 +4,16 @@
     display: grid;
     width: 100%;
     max-width: calc(#{$centerAreaMaxSize} + 2*#{$pagePadding});
-    padding: 0 $pagePadding;
     grid-template-columns: 5fr 7fr;
     margin: 0 auto;
 
     @media (max-width: 900px) {
-        padding: 30px $pagePadding;
+        padding: 30px 0;
         grid-template-columns: 1fr;
     }
 
     @media (max-width: 480px) {
-        padding: 20px $pagePadding480;
+        padding: 20px 0;
     }
 }
 

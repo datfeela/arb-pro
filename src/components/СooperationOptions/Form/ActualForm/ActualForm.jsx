@@ -5,6 +5,10 @@ import { isRequired, maxLength, minLength, validateName } from "../../../../asse
 import { parseSpacebars } from "../../../../assets/utils/stringParser";
 
 export const ActualForm = ({ fields, btnText, submitDesc }) => {
+    const handleNameBlur = (props) => {
+        debugger;
+    };
+
     //validation
     const validateNameField = (value) => {
         value = value.trim();
@@ -30,16 +34,30 @@ export const ActualForm = ({ fields, btnText, submitDesc }) => {
 
     return (
         <Formik initialValues={{ name: "", phone: "" }} onSubmit={submit}>
-            {({ isSubmitting }) => (
+            {({ isSubmitting, errors }) => (
                 <Form className={s.form}>
                     <div className={s.inputWrap}>
-                        <Field type="text" name="name" component={RenderField} validate={validateNameField} placeholder={fields.name.placeholder} />
+                        <Field
+                            type="text"
+                            name="name"
+                            component={RenderField}
+                            validate={validateNameField}
+                            placeholder={fields.name.placeholder}
+                            errors={errors.name}
+                        />
                         <div className={s.errorWrapAbsolute}>
                             <ErrorMessage name="name" component={WarningWithPopup} />
                         </div>
                     </div>
                     <div className={s.inputWrap}>
-                        <Field type="text" name="phone" component={RenderField} validate={validatePhoneField} placeholder={fields.phone.placeholder} />
+                        <Field
+                            type="text"
+                            name="phone"
+                            component={RenderField}
+                            validate={validatePhoneField}
+                            placeholder={fields.phone.placeholder}
+                            errors={errors.phone}
+                        />
                         <div className={s.errorWrapAbsolute}>
                             <ErrorMessage name="phone" component={WarningWithPopup} />
                         </div>
@@ -65,6 +83,7 @@ const RenderField = ({ form, field, ...props }) => {
             onChange={form.handleChange}
             checked={field.checked}
             placeholder={props.placeholder}
+            className={props.errors ? s.input + " " + s.input_error : s.input}
         />
     );
 };

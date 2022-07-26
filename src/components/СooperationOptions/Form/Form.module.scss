@@ -1,13 +1,30 @@
 @import "var.scss";
 
 $circleLeft: 63px;
+$circleLeft1080: 85px;
 
-.wrap{
+.wrap {
     max-width: $centerAreaMaxSize;
     width: 100%;
     margin: 0 auto;
     position: relative;
     padding-top: 200px;
+
+    @media (max-width: 1080px) {
+        height: unset;
+        padding-top: 150px;
+    }
+
+    @media (max-width: 768px) {
+        padding-top: 0;
+        width: calc(100% + 2 * #{$pagePadding});
+        margin-left: -$pagePadding;
+    }
+
+    @media (max-width: 480px) {
+        width: calc(100% + 2 * #{$pagePadding480});
+        margin-left: -$pagePadding480;
+    }
 }
 
 .wrapAbsolute {
@@ -16,8 +33,24 @@ $circleLeft: 63px;
     bottom: -200px;
     left: 0;
     height: 400px;
+    border-radius: 8px;
     background-color: $fontColor;
     display: flex;
+    overflow: hidden;
+
+    @media (max-width: 1080px) {
+        height: unset;
+        bottom: -150px;
+    }
+
+    @media (max-width: 768px) {
+        position: static;
+        border-radius: 0;
+    }
+
+    @media (max-width: 540px) {
+        flex-direction: column;
+    }
 }
 
 .title {
@@ -31,6 +64,10 @@ $circleLeft: 63px;
         font-size: $subtitleFont1120;
     }
 
+    @media (max-width: 768px) {
+        margin-right: -150px;
+    }
+
     @media (max-width: 480px) {
         font-size: $subtitleFont480;
     }
@@ -39,6 +76,26 @@ $circleLeft: 63px;
 .leftWrap {
     padding: 50px calc(75px + #{$circleLeft}) 50px 75px;
     flex-grow: 1;
+
+    @media (max-width: 1080px) {
+        padding: 30px calc(15px + #{$circleLeft1080}) 30px 35px;
+    }
+
+    @media (max-width: 900px) {
+        padding: 30px $circleLeft1080 30px 35px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 30px $circleLeft1080 30px 35px;
+    }
+
+    @media (max-width: 600px) {
+        padding: 30px 40px 30px 25px;
+    }
+
+    @media (max-width: 540px) {
+        padding: 30px 18px 5px 18px;
+    }
 }
 
 .rightWrap {
@@ -46,6 +103,18 @@ $circleLeft: 63px;
     display: flex;
     justify-content: end;
     align-items: flex-end;
+
+    @media (max-width: 900px) {
+        right: -40px;
+    }
+
+    @media (max-width: 600px) {
+        right: -65px;
+    }
+
+    @media (max-width: 540px) {
+        right: 0;
+    }
 }
 
 .circle {
@@ -54,15 +123,48 @@ $circleLeft: 63px;
     width: 275px;
     position: absolute;
     bottom: 15px;
-    left: -63px;
+    left: -$circleLeft;
     display: flex;
     align-items: center;
     border-radius: 50%;
+
+    @media (max-width: 1080px) {
+        height: 200px;
+        width: 200px;
+    }
+
+    @media (max-width: 1080px) {
+        left: -$circleLeft1080;
+    }
+
+    @media (max-width: 540px) {
+        height: 65vw;
+        width: 65vw;
+        left: 20px;
+        bottom: -60px;
+    }
+
+    @media (max-width: 440px) {
+        left: 15px;
+        bottom: -45px;
+    }
 }
 
-.content{
-    padding-left: 24px;
-    max-width: 174px;
+.content {
+    margin-left: 24px;
+    max-width: 150px;
+
+    @media (max-width: 540px) {
+        margin: 0 0 60px 55px;
+    }
+
+    @media (max-width: 440px) {
+        margin: 0 0 38px 30px;
+    }
+
+    @media (max-width: 360px) {
+        margin: 0 0 45px 23px;
+    }
 }
 
 .contentTitle {
@@ -72,8 +174,11 @@ $circleLeft: 63px;
     font-weight: 500;
     line-height: 16px;
     margin-bottom: 7px;
-}
 
+    @media (max-width: 360px) {
+        font-size: 14px;
+    }
+}
 
 .contentText {
     display: block;
@@ -81,9 +186,23 @@ $circleLeft: 63px;
     font-weight: 500;
     line-height: 16px;
     color: #ffd8dc;
+
+    @media (max-width: 360px) {
+        font-size: 12px;
+    }
 }
 
 .img {
     position: relative;
     z-index: 1;
+    height: 380px;
+
+    @media (max-width: 1080px) {
+        height: 290px;
+    }
+
+    @media (max-width: 540px) {
+        height: unset;
+        width: 58vw;
+    }
 }

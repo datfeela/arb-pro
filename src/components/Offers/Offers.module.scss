@@ -1,20 +1,9 @@
 @import "var.scss";
 
-.wrap{
-    max-width: 1936px;
-    margin: 0 auto;
+.wrap {
     background: #fff;
 
-    &.green{
-        background: $darkGreenColor
+    &.green {
+        background: $darkGreenColor;
     }
-}
-
-.wrapInner{
-    max-width: calc(#{$centerAreaMaxSize} + 2 * #{$pagePadding});
-    margin: 0 auto;
-}
-
-.ph{
-    height: 590px;
 }

@@ -16,7 +16,7 @@ export const Form = ({ title, fields, btnText, submitDesc, addInfo }) => {
                             <span className={s.contentText}>{addInfo.desc}</span>
                         </div>
                     </div>
-                    <img className={s.img} src="StrategicPlanning/Cooperation/form.png" alt="" />
+                    <img className={s.img} src="StrategicPlanning/Cooperation/form150res.png" alt="" />
                 </div>
             </div>
         </div>

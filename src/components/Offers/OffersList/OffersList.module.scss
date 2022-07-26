@@ -13,7 +13,6 @@
 }
 
 .list {
-    padding: 0 $pagePadding;
     margin-top: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -31,7 +30,6 @@
     }
 
     @media (max-width: 480px) {
-        padding: 0 $pagePadding480;
         margin-top: 10px;
     }
 }

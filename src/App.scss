@@ -1,0 +1,19 @@
+@import "var.scss";
+@import "./assets/scss/global.scss";
+@import "./assets/scss/common.scss";
+
+main {
+    margin-top: $headerHeight;
+
+    @media (max-width: 1120px) {
+        margin-top: $headerHeight1120;
+    }
+
+    @media (max-width: 768px) {
+        margin-top: $headerHeight768;
+    }
+
+    @media (max-width: 480px) {
+        margin-top: $headerHeight480;
+    }
+}

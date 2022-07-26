@@ -6,11 +6,11 @@ import { Stage } from "./Stage/Stage";
 
 export const Stages = () => {
     const data = useContext(AppContext).state.stages;
-    const blocks = data.blocks.map((block) => <Stage key={block.id} data={block} />);
+    const blocks = data.list.map((block) => <Stage key={block.id} data={block} />);
 
     return (
-        <div className={s.wrap}>
-            <div className={s.wrapInner}>
+        <div className={s.wrap + " wrap"}>
+            <div className={s.wrapInner + " wrapInner"}>
                 <div className={s.wrapTitle}>
                     <ArticleTitle title={data.title} />
                 </div>

@@ -1,0 +1,50 @@
+@import "var.scss";
+
+.wrap {
+    padding: 25px;
+    display: flex;
+    border: 1px solid $footerFontColor;
+
+    @media (max-width: 600px) {
+        padding: 18px 14px;
+    }
+}
+
+.iconWrap {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: start;
+    margin-right: 20px;
+
+    @media (max-width: 768px) {
+        height: 28px;
+        width: 28px;
+
+        svg{
+            height: 100%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        height: 21px;
+        width: 21px;
+    }
+}
+.text {
+    color: #000;
+    font-size: 20px;
+    line-height: 150%;
+
+    @media (max-width: 1120px) {
+        font-size: 18px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 14px;
+    }
+}

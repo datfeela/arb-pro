@@ -1,0 +1,34 @@
+.title {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 150%;
+
+    @media (max-width: 1120px) {
+        font-size: 40px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 34px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 28px;
+    }
+}
+
+.wrap {
+    max-width: 1936px;
+    margin: 0 auto;
+}
+
+.wrapInner {
+    max-width: calc(#{$centerAreaMaxSize} + 2 * #{$pagePadding});
+    margin: 0 auto;
+    padding-right: $pagePadding;
+    padding-left: $pagePadding;
+
+    @media (max-width: 480px) {
+        padding-right: $pagePadding480;
+        padding-left: $pagePadding480;
+    }
+}

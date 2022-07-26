@@ -9,13 +9,13 @@ export const Offers = () => {
     const data = useContext(AppContext).state.offers;
     return (
         <>
-            <div className={s.wrap}>
-                <div className={s.wrapInner}>
+            <div className={s.wrap + " wrap"}>
+                <div className={"wrapInner"}>
                     <Slider data={sliderData} />
                 </div>
             </div>
-            <div className={s.wrap + ' ' + s.green}>
-                <div className={s.wrapInner}>
+            <div className={s.wrap + " wrap " + s.green}>
+                <div className={"wrapInner"}>
                     <OffersList data={data} />
                 </div>
             </div>
