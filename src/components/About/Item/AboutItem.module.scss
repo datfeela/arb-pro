@@ -1,0 +1,133 @@
+@import "var.scss";
+
+.wrap {
+    @media (max-width: 1200px) {
+        padding: 25px 0;
+
+        &:first-child{
+            border-bottom: 1px solid $swampColor;
+        }
+    }
+
+    @media (max-width: 900px) {
+        padding: 20px 0;
+    }
+
+    @media (max-width: 768px) {
+        padding: 15px 0;
+    }
+}
+
+.header {
+    display: flex;
+    margin-bottom: 25px;
+
+    @media (max-width: 1200px) {
+        margin-bottom: 15px;
+    }
+
+    @media (max-width: 900px) {
+        align-items: center;
+    }
+
+    @media (max-width: 768px) {
+        margin-bottom: 5px;
+    }
+}
+
+.num {
+    color: $darkGreenColor;
+    font-size: 96px;
+    line-height: 100%;
+    font-weight: 600;
+    margin-right: 15px;
+
+    @media (max-width: 1120px) {
+        font-size: 72px;
+    }
+
+    @media (max-width: 900px) {
+        font-size: 60px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 50px;
+    }
+}
+
+.textWrap {
+    max-width: 120px;
+    padding: 16px 0 6px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (min-width: 901px) and (max-width: 1200px) {
+        max-width: unset;
+    }
+
+    @media (max-width: 900px) {
+        padding: 0;
+    }
+}
+
+.plus {
+    color: $darkGreenColor;
+    font-size: 44px;
+    font-weight: 600;
+
+    @media (max-width: 1120px) {
+        font-size: 37px;
+    }
+
+    @media (max-width: 900px) {
+        font-size: 32px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 29px;
+    }
+}
+
+.text {
+    display: block;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 120%;
+
+    &_desc {
+        line-height: 150%;
+    }
+
+    &_lowRes {
+        display: none;
+        color: $darkGreenColor;
+        font-weight: 700;
+    }
+
+    @media (min-width: 901px) and (max-width: 1200px) {
+        max-width: unset;
+    }
+
+    @media (max-width: 900px) {
+        max-width: 400px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 15px;
+
+        &_highRes {
+            display: none;
+        }
+
+        &_lowRes {
+            display: block;
+            margin-bottom: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        font-size: 14px;
+    }
+}

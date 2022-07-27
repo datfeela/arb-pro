@@ -12,6 +12,8 @@ import { AppContext } from './context';
 import { Tools } from "./components/Tools/Tools";
 import { Cases } from "./components/Cases/Cases";
 import { Feedback } from "./components/Feedback/Feedback";
+import { About } from "./components/About/About";
+import { Team } from "./components/Team/Team";
 
 function App() {
   const context = useContext(AppContext);
@@ -41,6 +43,8 @@ function App() {
             <Cases />
             <Stages />
             <Feedback />
+            <About />
+            <Team />
           </main>
           <Footer />
         </>}

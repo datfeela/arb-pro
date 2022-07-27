@@ -82,12 +82,16 @@
 
 .button {
     height: 68px;
-    background-color: $redColor;
+    background: $redColor;
     color: #fff;
     font-size: 16px;
     font-weight: 600;
     line-height: 125%;
     border-radius: 1px;
+
+    &:hover{
+        background: $greenColor;
+    }
 
     @media (max-width: 1080px) {
         height: 50px;

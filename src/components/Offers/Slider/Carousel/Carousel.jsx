@@ -18,7 +18,7 @@ export const Carousel = ({ slides }) => {
                 <Swiper
                     id="main"
                     spaceBetween={23}
-                    slidesPerView={1}
+                    slidesPerView={2}
                     loop={true}
                     grabCursor={true}
                     speed={2500}
@@ -29,13 +29,10 @@ export const Carousel = ({ slides }) => {
                     // onSlideChange={() => console.log("slide change")}
                     // onSwiper={(swiper) => console.log(swiper)}
                     breakpoints={{
-                        480: {
-                            slidesPerView: 2,
-                        },
-                        660: {
+                        500: {
                             slidesPerView: 3,
                         },
-                        850: {
+                        780: {
                             slidesPerView: 4,
                         },
                         900: {

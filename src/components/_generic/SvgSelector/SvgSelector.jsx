@@ -3,7 +3,7 @@ export const SvgSelector = ({ type }) => {
         case "arrow":
             return (
                 <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none">
-                    <path d="M9 2L5.5 5L2 2" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                    <path d="M9 2L5.5 5L2 2" strokeWidth="2" strokeLinecap="square" strokeLinejoin="round" />
                 </svg>
             );
         case "arrowCircle":
@@ -504,6 +504,28 @@ export const SvgSelector = ({ type }) => {
                     />
                     <path
                         d="M258.98 226.25C258.76 227.314 257.24 227.314 257.021 226.25L253.918 211.202C253.79 210.582 254.264 210 254.897 210L261.103 210C261.736 210 262.21 210.582 262.082 211.202L258.98 226.25Z"
+                        fill="#2F2C27"
+                    />
+                </svg>
+            );
+        case "feedbackMainLowRes":
+            return (
+                <svg xmlns="http://www.w3.org/2000/svg" width="326" viewBox="0 0 326 148" fill="none">
+                    <rect y="17" width="28" height="28" rx="14" fill="#D6001C" />
+                    <path d="M62.5241 122.204L87.68 78.6324L112.836 122.204L62.5241 122.204Z" fill="#007367" />
+                    <rect x="57" width="204" height="123" rx="61.5" fill="#00ACA8" />
+                    <rect x="98" y="28" width="16" height="15" fill="white" />
+                    <rect x="155" y="28" width="49" height="15" fill="white" />
+                    <rect x="127" y="28" width="16" height="15" fill="white" />
+                    <rect x="228" y="88" width="27" height="27" fill="#007367" />
+                    <rect x="98" y="77" width="106" height="6" fill="white" />
+                    <rect x="98" y="58" width="106" height="6" fill="white" />
+                    <path
+                        d="M302 29C302 28.4477 302.448 28 303 28H325C325.552 28 326 28.4477 326 29V88.6404C326 89.3148 325.346 89.7959 324.702 89.5949L314.298 86.348C314.104 86.2875 313.896 86.2875 313.702 86.348L303.298 89.5949C302.654 89.7959 302 89.3148 302 88.6404V29Z"
+                        fill="#D6001C"
+                    />
+                    <path
+                        d="M314.957 118.851C314.669 119.797 313.331 119.797 313.043 118.851L310.062 109.041C309.867 108.398 310.348 107.75 311.019 107.75L316.981 107.75C317.652 107.75 318.133 108.398 317.938 109.041L314.957 118.851Z"
                         fill="#2F2C27"
                     />
                 </svg>

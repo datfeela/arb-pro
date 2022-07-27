@@ -168,39 +168,6 @@
             { "text": "обоснованную и реалистичную программу действий", "bold": true }
         ]
     },
-    "feedback": {
-        "title": [
-            { "color": "red", "text": "Отзывы " },
-            { "color": "black", "text": "клиентов" }
-        ],
-        "items": [
-            {
-                "id": "1",
-                "name": "Александр Александров",
-                "desc": "Менеджер корпоративного обучения, Сбер Банк",
-                "text": "На руки вы получите стратегию с рыночным обоснованием, карту рынка, карту стратегических альтернатив, диагностику экономического состояния компании, план действий с этапами, задачами, метриками, прописанными барьерами, рисками и шагами. Сверх того — с вами навсегда останется технология составления стратегии. ",
-                "textExtended": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nulla aperiam excepturi illum accusamus tempora voluptate culpa blanditiis amet voluptatem. Quae dolor quisquam saepe cupiditate. Voluptatibus earum at molestiae magnam possimus distinctio delectus. Dolorum debitis aliquid modi saepe quod veniam eligendi? Laudantium ducimus et, ratione harum impedit maxime dolores, ullam deleniti totam, tempore alias quos reiciendis aliquam earum delectus eveniet similique consequatur? Itaque necessitatibus in fugit voluptate numquam! Culpa molestias, nostrum magnam alias, ea ipsum officiis maiores architecto itaque debitis assumenda, voluptas reiciendis fugit esse et quisquam quae suscipit praesentium nam quam minima. Sapiente voluptates incidunt dolorem nobis, eius id?"
-            },
-            {
-                "id": "2",
-                "name": "Александр Александров",
-                "desc": "Менеджер корпоративного обучения, Сбер Банк",
-                "text": "На руки вы получите стратегию с рыночным обоснованием, карту рынка, карту стратегических альтернатив, диагностику экономического состояния компании, план действий с этапами, задачами, метриками, прописанными барьерами, рисками и шагами. Сверх того — с вами навсегда останется технология составления стратегии. ",
-                "textExtended": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nulla aperiam excepturi illum accusamus tempora voluptate culpa blanditiis amet voluptatem. Quae dolor quisquam saepe cupiditate. Voluptatibus earum at molestiae magnam possimus distinctio delectus. Dolorum debitis aliquid modi saepe quod veniam eligendi?"
-            },
-            {
-                "id": "3",
-                "name": "Александр Александров",
-                "desc": "Менеджер корпоративного обучения, Сбер Банк",
-                "text": "На руки вы получите стратегию с рыночным обоснованием, карту рынка, карту стратегических альтернатив, диагностику экономического состояния компании, план действий с этапами, задачами, метриками, прописанными барьерами, рисками и шагами. Сверх того — с вами навсегда останется технология составления стратегии. ",
-                "textExtended": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nulla aperiam excepturi illum accusamus tempora voluptate culpa blanditiis amet voluptatem. Quae dolor quisquam saepe cupiditate. Voluptatibus earum at molestiae magnam possimus distinctio delectus. Dolorum debitis aliquid modi saepe quod veniam eligendi? Laudantium ducimus et, ratione harum impedit maxime dolores, ullam deleniti totam, tempore alias quos reiciendis aliquam earum delectus eveniet similique consequatur? Itaque necessitatibus in fugit voluptate numquam! Culpa molestias, nostrum magnam alias, ea ipsum officiis maiores architecto itaque debitis assumenda, voluptas reiciendis fugit esse et quisquam quae suscipit praesentium nam quam minima. Sapiente voluptates incidunt dolorem nobis, eius id?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nulla aperiam excepturi illum accusamus tempora voluptate culpa blanditiis amet voluptatem. Quae dolor quisquam saepe cupiditate. Voluptatibus earum at molestiae magnam possimus distinctio delectus. Dolorum debitis aliquid modi saepe quod veniam eligendi? Laudantium ducimus et, ratione harum impedit maxime dolores, ullam deleniti totam, tempore alias quos reiciendis aliquam earum delectus eveniet similique consequatur? Itaque necessitatibus in fugit voluptate numquam! Culpa molestias, nostrum magnam alias, ea ipsum officiis maiores architecto itaque debitis assumenda, voluptas reiciendis fugit esse et quisquam quae suscipit praesentium nam quam minima. Sapiente voluptates incidunt dolorem nobis, eius id?"
-            }
-        ]
-    },
-    "about": {},
-    "team": {},
-    "contact": {},
-    "QA": {},
     "stages": {
         "title": [
             { "color": "black", "text": "Вместе с вами пройдем " },
@@ -256,5 +223,94 @@
                 ]
             }
         ]
-    }
+    },
+    "feedback": {
+        "title": [
+            { "color": "red", "text": "Отзывы " },
+            { "color": "black", "text": "клиентов" }
+        ],
+        "items": [
+            {
+                "id": "1",
+                "name": "Александр Александров",
+                "desc": "Менеджер корпоративного обучения, Сбер Банк",
+                "text": "На руки вы получите стратегию с рыночным обоснованием, карту рынка, карту стратегических альтернатив, диагностику экономического состояния компании, план действий с этапами, задачами, метриками, прописанными барьерами, рисками и шагами. Сверх того — с вами навсегда останется технология составления стратегии. ",
+                "textExtended": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nulla aperiam excepturi illum accusamus tempora voluptate culpa blanditiis amet voluptatem. Quae dolor quisquam saepe cupiditate. Voluptatibus earum at molestiae magnam possimus distinctio delectus. Dolorum debitis aliquid modi saepe quod veniam eligendi? Laudantium ducimus et, ratione harum impedit maxime dolores, ullam deleniti totam, tempore alias quos reiciendis aliquam earum delectus eveniet similique consequatur? Itaque necessitatibus in fugit voluptate numquam! Culpa molestias, nostrum magnam alias, ea ipsum officiis maiores architecto itaque debitis assumenda, voluptas reiciendis fugit esse et quisquam quae suscipit praesentium nam quam minima. Sapiente voluptates incidunt dolorem nobis, eius id?"
+            },
+            {
+                "id": "2",
+                "name": "Александр Александров",
+                "desc": "Менеджер корпоративного обучения, Сбер Банк",
+                "text": "На руки вы получите стратегию с рыночным обоснованием, карту рынка, карту стратегических альтернатив, диагностику экономического состояния компании, план действий с этапами, задачами, метриками, прописанными барьерами, рисками и шагами. Сверх того — с вами навсегда останется технология составления стратегии. ",
+                "textExtended": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nulla aperiam excepturi illum accusamus tempora voluptate culpa blanditiis amet voluptatem. Quae dolor quisquam saepe cupiditate. Voluptatibus earum at molestiae magnam possimus distinctio delectus. Dolorum debitis aliquid modi saepe quod veniam eligendi?"
+            },
+            {
+                "id": "3",
+                "name": "Александр Александров",
+                "desc": "Менеджер корпоративного обучения, Сбер Банк",
+                "text": "На руки вы получите стратегию с рыночным обоснованием, карту рынка, карту стратегических альтернатив, диагностику экономического состояния компании, план действий с этапами, задачами, метриками, прописанными барьерами, рисками и шагами. Сверх того — с вами навсегда останется технология составления стратегии. ",
+                "textExtended": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nulla aperiam excepturi illum accusamus tempora voluptate culpa blanditiis amet voluptatem. Quae dolor quisquam saepe cupiditate. Voluptatibus earum at molestiae magnam possimus distinctio delectus. Dolorum debitis aliquid modi saepe quod veniam eligendi? Laudantium ducimus et, ratione harum impedit maxime dolores, ullam deleniti totam, tempore alias quos reiciendis aliquam earum delectus eveniet similique consequatur? Itaque necessitatibus in fugit voluptate numquam! Culpa molestias, nostrum magnam alias, ea ipsum officiis maiores architecto itaque debitis assumenda, voluptas reiciendis fugit esse et quisquam quae suscipit praesentium nam quam minima. Sapiente voluptates incidunt dolorem nobis, eius id?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nulla aperiam excepturi illum accusamus tempora voluptate culpa blanditiis amet voluptatem. Quae dolor quisquam saepe cupiditate. Voluptatibus earum at molestiae magnam possimus distinctio delectus. Dolorum debitis aliquid modi saepe quod veniam eligendi? Laudantium ducimus et, ratione harum impedit maxime dolores, ullam deleniti totam, tempore alias quos reiciendis aliquam earum delectus eveniet similique consequatur? Itaque necessitatibus in fugit voluptate numquam! Culpa molestias, nostrum magnam alias, ea ipsum officiis maiores architecto itaque debitis assumenda, voluptas reiciendis fugit esse et quisquam quae suscipit praesentium nam quam minima. Sapiente voluptates incidunt dolorem nobis, eius id?"
+            }
+        ]
+    },
+    "about": {
+        "title": [
+            { "color": "red", "text": "АРБ Про " },
+            { "color": "black", "text": "это" }
+        ],
+        "items": [
+            { "id": 1, "num": "6000", "textTop": "регулярных участников", "desc": "корпоративных программ и конференций по стратегии и управлению" },
+            { "id": 2, "num": "160", "textTop": "проектов", "desc": "по разработке или обновлению стратегии" }
+        ],
+        "circleInfo": {
+            "num": "27",
+            "textTop": "компаний",
+            "desc": "заняли позицию №1 или №2 в своих рынках после нашей совместной работы"
+        }
+    },
+    "team": {
+        "title": [
+            { "color": "black", "text": "Над вашей стратегией ", "br": true },
+            { "color": "red", "text": "будут работать" }
+        ],
+        "members": [
+            {
+                "id": 1,
+                "name": "Сергей Макшанов",
+                "desc": "управляющий ГК «Институт Тренинга — АРБ Про»"
+            },
+            {
+                "id": 2,
+                "name": "Демид Голиков",
+                "desc": "директор АРБ Про"
+            },
+            {
+                "id": 3,
+                "name": "Роман Копосов",
+                "desc": "руководитель направления «Стратегическое планирование» АРБ Про"
+            },
+            {
+                "id": 4,
+                "name": "Зоя Стрелкова",
+                "desc": "руководитель направления «Экономика компании» АРБ Про"
+            },
+            {
+                "id": 5,
+                "name": "Елена Сысуева",
+                "desc": "руководитель направления «Стратегический маркетинг» АРБ Про"
+            },
+            {
+                "id": 6,
+                "name": "Григорий Карлышев",
+                "desc": "консультант направления «Стратегический маркетинг» АРБ Про"
+            },
+            {
+                "id": 7,
+                "name": "Ольга Попова",
+                "desc": "консультант направления «Стратегическое планирование» АРБ Про"
+            }
+        ]
+    },
+    "contact": {},
+    "QA": {}
 }

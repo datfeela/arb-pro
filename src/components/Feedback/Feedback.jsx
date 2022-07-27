@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import s from "./Feedback.module.scss";
 import { AppContext } from "../../context";
 import { ArticleTitle } from "../_generic/ArticleTitle/ArticleTitle";
@@ -11,6 +11,15 @@ export const Feedback = () => {
         <FeedbackItem key={item.id} id={item.id} name={item.name} desc={item.desc} text={item.text} textExtended={item.textExtended} />
     ));
 
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const handleBtnClick = () => {
+        setIsExpanded(true);
+    };
+
+    const [item1, item2, ...restItems] = items;
+    const itemsStart = [item1, item2];
+
     return (
         <div className={s.wrap + " wrap"}>
             <div className={"wrapInner"}>
@@ -18,11 +27,20 @@ export const Feedback = () => {
                     <ArticleTitle title={data.title} />
                 </div>
                 <div className={s.content}>
-                    <div className={s.items_wrap}>
-                        {items}
+                    <div className={s.itemsWrap}>
+                        {itemsStart}
+                        {isExpanded && restItems}
                     </div>
-                    <SvgSelector type="feedbackMain" />
+                    <div className={s.iconWrap + " " + s.iconWrap_default}>
+                        <SvgSelector type="feedbackMain" />
+                    </div>
+                    <div className={s.iconWrap + " " + s.iconWrap_lowRes}>
+                        <SvgSelector type="feedbackMainLowRes" />
+                    </div>
                 </div>
+                <button onClick={handleBtnClick} className={isExpanded ? s.expandBtn + " " + s.expandBtn_hidden : s.expandBtn}>
+                    Показать все отзывы
+                </button>
             </div>
         </div>
     );

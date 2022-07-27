@@ -20,6 +20,10 @@
     }
 
     @media (max-width: 900px) {
-        width: calc(100vw - 2 * #{$pagePadding});
+        width: calc(100vw + 100px);
+    }
+
+    @media (max-width: 500px) {
+        width: calc(100vw + 50px);
     }
 }
