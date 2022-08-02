@@ -1,41 +1,17 @@
 @import "var.scss";
 
-.nav{
+.nav {
+    height: $headerHeight;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid $swampColor;
 
+    &_burgerActive {
+        border-bottom: none;
+    }
+
     @media (max-width: 1500px) {
         display: none;
-    }
-}
-
-.link{
-    position: relative;
-    font-size: 15px;
-    font-weight: 600;
-    margin: 0 1em;
-    color: $darkGreenColor;
-
-    &::before {
-        content: "";
-        background-color: transparent;
-        position: absolute;
-        top: -8px;
-        left: 50%;
-        transition: background-color 0.5s;
-        transform: translateX(-50%);
-        border-radius: 50%;
-        width: 7px;
-        height: 7px;
-    }
-
-    &:hover {
-        color: $redColor;
-
-        &::before {
-            background-color: $redColor;
-        }
     }
 }

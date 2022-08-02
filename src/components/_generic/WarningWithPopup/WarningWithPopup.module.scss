@@ -24,25 +24,54 @@
 
 .popupWrap {
     position: absolute;
-    top: calc(20px + 5px);
-    right: -9px;
+    top: calc(20px + 20px);
+    right: 0;
     opacity: 0;
     visibility: hidden;
+
+    &_reverse{
+        right: unset;
+        left: 0;
+    }
+
+    @media (max-width: 768px) {
+        top: calc(20px + 10px);
+    }
 }
 
 .popup {
     text-align: start;
     position: relative;
     z-index: 5;
-    width: 250px;
+    width: 280px;
     background-color: #fff;
-    padding: 8px 12px;
+    padding: 12px 20px;
     border: 1px solid rgba($color: $fontColor, $alpha: 0.2);
     box-shadow: 0 8px 12px 0 rgba($color: $fontColor, $alpha: 0.2);
     border-radius: 4px;
+
+    @media (max-width: 768px) {
+        width: 240px;
+    }
+
+    @media (max-width: 680px) {
+        width: 220px;
+        padding: 10px 15px;
+    }
 }
 
 .text {
+    display: block;
+    font-size: 18px;
+    line-height: 150%;
     font-weight: 500;
     color: $fontColor;
+
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
+
+    @media (max-width: 680px) {
+        font-size: 14px;
+    }
 }

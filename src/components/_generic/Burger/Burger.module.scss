@@ -1,0 +1,59 @@
+@import "var.scss";
+
+.wrap {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 23px;
+    height: 21px;
+
+    &:hover {
+        span {
+            &:first-child {
+                transform: translateY(-2px);
+            }
+
+            &:last-child {
+                transform: translateY(2px);
+            }
+        }
+    }
+
+    &_active {
+        &:hover {
+            span {
+                &:first-child {
+                    display: block;
+                    transform: rotate(45deg) translateY(12.5px);
+                }
+
+                &:last-child {
+                    display: block;
+                    transform: rotate(-45deg) translateY(-12.5px);
+                }
+            }
+        }
+
+        span {
+            display: none;
+
+            &:first-child {
+                display: block;
+                transform: rotate(45deg) translateY(12.5px);
+            }
+
+            &:last-child {
+                display: block;
+                transform: rotate(-45deg) translateY(-12.5px);
+            }
+        }
+    }
+
+    span {
+        transition: all 0.3s ease;
+        height: 3px;
+        width: 100%;
+        background-color: $darkGreenColor;
+    }
+}

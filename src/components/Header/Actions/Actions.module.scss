@@ -1,0 +1,89 @@
+@import "var.scss";
+
+.wrap {
+    display: flex;
+    align-items: center;
+}
+
+.searchButton {
+    margin: 5px 26px 0 0;
+    width: 22px;
+
+    svg{
+        fill: $darkGreenColor;
+    }
+}
+
+.button {
+    position: relative;
+    background-color: $redColor;
+    width: 244px;
+    padding: 20px 0;
+    border-radius: 0 0 0 10px;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 65px;
+        height: 100%;
+        width: 100%;
+        background: $greenColor;
+        border-radius: 0 0 0 10px;
+        z-index: 1;
+        transition: all 0.5s ease;
+    }
+
+    &:hover {
+        &::after {
+            top: 0;
+        }
+    }
+
+    span {
+        position: relative;
+        z-index: 12;
+        color: #fff;
+        font-size: 16px;
+        line-height: 125%;
+    }
+
+    @media (max-width: 1120px) {
+        padding: 12px 0;
+        width: 192px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 10px 0;
+        width: 160px;
+
+        span {
+            font-size: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        width: unset;
+        padding: 0;
+        span {
+            display: none;
+        }
+    }
+}
+
+.iconPhone {
+    display: none;
+    padding: 10px;
+
+    svg{
+        width: 22px;
+        height: 22px;
+    }
+
+    @media (max-width: 480px) {
+        position: relative;
+        z-index: 12;
+        display: block;
+    }
+}

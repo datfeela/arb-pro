@@ -1,0 +1,33 @@
+@import "var.scss";
+
+.wrap {
+    background: #fff;
+    padding: 80px 0 140px 0;
+
+    @media (max-width: 1120px) {
+        padding: 55px 0 95px 0;
+    }
+
+    @media (max-width: 768px) {
+        padding: 40px 0 80px 0;
+    }
+
+    @media (max-width: 480px) {
+        padding: 25px 0 45px 0;
+    }
+}
+.titleWrap {
+    margin-bottom: 60px;
+
+    @media (max-width: 1120px) {
+        margin-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+        margin-bottom: 30px;
+    }
+
+    @media (max-width: 480px) {
+        margin-bottom: 20px;
+    }
+}

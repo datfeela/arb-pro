@@ -1,0 +1,78 @@
+@import "var.scss";
+
+.item {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        .link {
+            color: $redColor;
+
+            &::before {
+                transform: translateY(-3px);
+                background-color: $redColor;
+            }
+        }
+
+        .iconWrap {
+            transform: translateY(18px);
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    &_empty {
+        &:hover {
+            .link {
+                transform: translateY(3px);
+
+                &::before {
+                    transform: translateY(-6px);
+                }
+            }
+        }
+    }
+}
+
+.link {
+    display: block;
+    position: relative;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 1em;
+    color: $darkGreenColor;
+    transition: all 0.5s ease;
+
+    &::before {
+        content: "";
+        background-color: transparent;
+        position: absolute;
+        top: -4px;
+        left: 50%;
+        transition: all 0.5s;
+        border-radius: 50%;
+        width: 7px;
+        height: 7px;
+    }
+}
+
+.iconWrap {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    transition: all 0.4s ease;
+    opacity: 1;
+    visibility: visible;
+
+    svg {
+        stroke: $darkGreenColor;
+    }
+
+    @media (max-width: 1500px) {
+    }
+}

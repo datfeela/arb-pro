@@ -32,3 +32,46 @@
         padding-left: $pagePadding480;
     }
 }
+
+// form
+
+.formButton {
+    height: 68px;
+    background: $redColor;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 125%;
+    border-radius: 1px;
+
+    &:hover {
+        background: $greenColor;
+    }
+
+    &:focus {
+        background: $greenColor;
+    }
+
+    @media (max-width: 540px) {
+        margin: 30px 0 14px 0;
+        height: 55px;
+        font-size: 15px;
+    }
+
+    @media (max-width: 400px) {
+        margin: 20px 0 7px 0;
+        height: 45px;
+    }
+}
+
+.formSubmitDesc {
+    color: #707070;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 155%;
+
+    a {
+        color: #707070;
+        text-decoration: underline;
+    }
+}

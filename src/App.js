@@ -14,6 +14,8 @@ import { Cases } from "./components/Cases/Cases";
 import { Feedback } from "./components/Feedback/Feedback";
 import { About } from "./components/About/About";
 import { Team } from "./components/Team/Team";
+import { ContactUs } from "./components/ContactUs/ContactUs";
+import { QA } from "./components/QA/QA";
 
 function App() {
   const context = useContext(AppContext);
@@ -45,6 +47,8 @@ function App() {
             <Feedback />
             <About />
             <Team />
+            <ContactUs />
+            <QA />
           </main>
           <Footer />
         </>}

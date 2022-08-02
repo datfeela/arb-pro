@@ -1,0 +1,161 @@
+@import "var.scss";
+
+.wrapAbsolute {
+    width: 100%;
+    position: relative;
+    top: $headerHeight;
+    left: 0;
+    background-color: $darkGreenColor;
+    overflow: hidden;
+    height: 0px;
+    transition: all 0.5s ease;
+
+    @media (max-width: 1500px) {
+        display: none;
+    }
+}
+
+.wrap {
+    width: 100%;
+    max-width: $centerAreaMaxSize;
+    margin: 0 auto;
+    padding: 25px 100px;
+    display: grid;
+    grid-template-columns: 360px 305px auto;
+
+    @media (max-width: 1120px) {
+        top: $headerHeight1120;
+    }
+
+    @media (max-width: 768px) {
+        top: $headerHeight768;
+    }
+
+    @media (max-width: 480px) {
+        top: $headerHeight480;
+    }
+}
+
+.listWrap {
+    &_useful {
+        max-width: 280px;
+    }
+
+    &_about {
+        max-width: 160px;
+    }
+}
+
+.title {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.list {
+}
+
+.item {
+    cursor: pointer;
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        a {
+            color: $brightGreenColor;
+        }
+
+        svg {
+            fill: #fff;
+        }
+    }
+
+    &_withIcon {
+        margin-top: 15px;
+
+        a {
+            display: flex;
+            text-decoration: underline;
+        }
+
+        svg {
+            fill: $swampColor;
+            margin-right: 13px;
+        }
+    }
+
+    a {
+        color: #fff;
+        font-size: 15px;
+        line-height: 120%;
+        font-weight: 600;
+    }
+}
+
+.link {
+    display: block;
+}
+
+.contacts {
+}
+
+.contactsLink {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 130%;
+
+    &:hover {
+        color: $brightGreenColor;
+    }
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.linkSocial {
+    svg {
+        fill: #fff;
+    }
+
+    &_WA {
+        svg {
+            &:hover {
+                fill: $brightGreenColor;
+            }
+        }
+    }
+
+    &_TG {
+        svg {
+            &:hover {
+                fill: #35acf1;
+            }
+        }
+    }
+
+    &_YT {
+        svg {
+            &:hover {
+                fill: $lightRedColor;
+            }
+        }
+    }
+
+    &_VK {
+        svg {
+            &:hover {
+                fill: #4081ff;
+            }
+        }
+    }
+}

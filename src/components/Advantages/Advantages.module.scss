@@ -4,28 +4,12 @@
     background: #0a0909;
     padding: 100px 0;
 
-    span {
-        font-size: 28px;
-        font-weight: 600;
-        line-height: 140%;
-    }
-
     @media (max-width: 1120px) {
         padding: 70px 0;
-
-        span {
-            font-size: 23px;
-        }
     }
 
     @media (max-width: 768px) {
         padding: 40px 0;
-    }
-
-    @media (max-width: 480px) {
-        span {
-            font-size: 18px;
-        }
     }
 }
 
@@ -88,15 +72,23 @@
 }
 
 .text {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 140%;
+
     text-align: left;
     color: $redColor;
     margin-right: 20px;
 
+    @media (max-width: 1120px) {
+        font-size: 23px;
+    }
+
     @media (max-width: 768px) {
-        font-size: 18px !important;
+        font-size: 18px;
     }
 
     @media (max-width: 480px) {
-        font-size: 15px !important;
+        font-size: 14px;
     }
 }

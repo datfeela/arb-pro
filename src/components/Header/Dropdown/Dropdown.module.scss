@@ -1,0 +1,24 @@
+@import "var.scss";
+
+.wrap {
+    position: relative;
+    height: 0px;
+    z-index: -1;
+    max-width: calc(1920px + #{$scrollbarWidth});
+    width: calc(100% + #{$scrollbarWidth});
+    margin-left: $scrollbarWidth;
+    width: 100%;
+
+    @media (min-width: 1936px) and (max-width: 1952px) {
+        margin-left: calc(100vw - 1936px);
+    }
+
+    @media (max-width: 1936px) {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    @media (max-width: 480px) {
+    }
+}
+

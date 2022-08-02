@@ -1,0 +1,116 @@
+@import "var.scss";
+
+.input {
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    border-bottom: 3px solid $greyFontColor;
+
+    &.textarea {
+        // margin-top: 20px;
+        // padding-bottom: 20px;
+        padding: 20px;
+        height: unset;
+        resize: none;
+
+        &::-webkit-scrollbar {
+            width: 0px;
+        }
+    }
+
+    &:hover {
+        border-bottom: 3px solid $greenColor;
+    }
+
+    &:focus {
+        border-bottom: 3px solid $brightGreenColor !important;
+
+        &::placeholder {
+            color: #f5f5f5;
+        }
+    }
+
+    &:autofill {
+        box-shadow: 0 0 0 30px #2f2c27 inset !important;
+        -webkit-text-fill-color: #fff !important;
+        caret-color: #fff;
+    }
+
+    &::placeholder {
+        color: $swampColor;
+    }
+
+    &_error {
+        border-bottom: 3px solid $redColor;
+    }
+
+    &_touched {
+        border-bottom: 3px solid $greenColor;
+    }
+
+    &_light {
+        color: $fontColor;
+        border-bottom: 3px solid rgba($color: $swampColor, $alpha: 0.5);
+
+        &:autofill {
+            box-shadow: 0 0 0 30px #fff inset !important;
+            -webkit-text-fill-color: $fontColor !important;
+            caret-color: #000;
+        }
+
+        &:focus {
+            &::placeholder {
+                color: $greyFontColor;
+            }
+        }
+
+        &.input_error {
+            border-bottom: 3px solid $redColor;
+        }
+
+        &.input_touched {
+            border-bottom: 3px solid $greenColor;
+        }
+    }
+
+    @media (max-width: 680px) {
+        font-size: 14px;
+        padding: 0px 7px;
+        border-bottom: 2px solid $greenColor;
+
+        &.textarea {
+            // margin-top: 7px;
+            // padding-bottom: 7px;
+            padding: 7px;
+        }
+
+        &:focus {
+            border-bottom: 2px solid $brightGreenColor !important;
+        }
+        &:hover {
+            border-bottom: 2px solid $greenColor;
+        }
+        &_touched {
+            border-bottom: 2px solid $greenColor;
+        }
+        &_error {
+            border-bottom: 2px solid $redColor;
+        }
+        &_light {
+            border-bottom: 2px solid rgba($color: $swampColor, $alpha: 0.5);
+
+            &.input_error {
+                border-bottom: 2px solid $redColor;
+            }
+
+            &.input_touched {
+                border-bottom: 2px solid $greenColor;
+            }
+        }
+    }
+}

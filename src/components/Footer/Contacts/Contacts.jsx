@@ -1,89 +1,31 @@
-import styled from "styled-components";
-import { FooterTheme, Theme } from "../../../assets/styled/theme";
+import s from "./Contacts.module.scss";
 import { SvgSelector } from "../../_generic/SvgSelector/SvgSelector";
 
 export const Contacts = ({ contacts }) => {
     return (
-        <Wrap>
-            <LinksWrap>
-                <LinkContact href={contacts.phone.link}>{contacts.phone.title}</LinkContact>
-                <LinkContact href={contacts.email.link}>{contacts.email.title}</LinkContact>
-            </LinksWrap>
-            <LinksWrapSocials>
-                <LinkSocial href={contacts.socials.WA}>
+        <div className={s.wrap}>
+            <div className={s.linksWrap}>
+                <a className={s.linkContact} href={contacts.phone.link}>
+                    {contacts.phone.title}
+                </a>
+                <a className={s.linkContact} href={contacts.email.link}>
+                    {contacts.email.title}
+                </a>
+            </div>
+            <div className={s.linksWrapSocials}>
+                <a target="_blank" rel="noreferrer" className={s.linkSocial + " " + s.linkSocial_WA} href={contacts.socials.WA}>
                     <SvgSelector type="WA" />
-                </LinkSocial>
-                <LinkSocial href={contacts.socials.TG}>
+                </a>
+                <a target="_blank" rel="noreferrer" className={s.linkSocial + " " + s.linkSocial_TG} href={contacts.socials.TG}>
                     <SvgSelector type="TG" />
-                </LinkSocial>
-                <LinkSocial href={contacts.socials.YT}>
+                </a>
+                <a target="_blank" rel="noreferrer" className={s.linkSocial + " " + s.linkSocial_YT} href={contacts.socials.YT}>
                     <SvgSelector type="YT" />
-                </LinkSocial>
-                <LinkSocial href={contacts.socials.VK}>
+                </a>
+                <a target="_blank" rel="noreferrer" className={s.linkSocial + " " + s.linkSocial_VK} href={contacts.socials.VK}>
                     <SvgSelector type="VK" />
-                </LinkSocial>
-            </LinksWrapSocials>
-        </Wrap>
+                </a>
+            </div>
+        </div>
     );
 };
-
-const Wrap = styled.div`
-    margin-left: auto;
-    width: 380px;
-
-    @media (max-width: 1120px) {
-        max-width: 330px;
-    }
-
-    @media (max-width: 768px) {
-        grid-area: contacts;
-        margin: 0;
-        max-width: 280px;
-    }
-`;
-
-const LinksWrap = styled.div`
-    margin-bottom: 130px;
-
-    @media (max-width: 768px) {
-        margin-bottom: 25px;
-    }
-`;
-
-const LinkContact = styled.a`
-    display: block;
-    margin-bottom: 10px;
-    width: 100%;
-    color: ${FooterTheme.fontColor};
-    font-size: 37px;
-    font-weight: 600;
-    line-height: 130%;
-
-    &:hover {
-        color: ${Theme.greenColor};
-    }
-
-    @media (max-width: 1120px) {
-        font-size: 30px;
-    }
-
-    @media (max-width: 768px) {
-        font-size: 27px;
-    }
-`;
-
-const LinksWrapSocials = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-`;
-
-const LinkSocial = styled.a`
-    svg {
-        fill: #fff;
-
-        &:hover {
-            fill: ${Theme.greenColor};
-        }
-    }
-`;

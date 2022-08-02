@@ -1,0 +1,68 @@
+@import "var.scss";
+
+.wrap {
+}
+
+.header {
+    display: flex;
+    margin-bottom: 15px;
+
+    @media (max-height: 850px) {
+        margin-bottom: 10px;
+    }
+}
+
+.link {
+    font-size: 18px;
+    color: #fff;
+    &:hover {
+        color: $brightGreenColor;
+    }
+
+    @media (max-height: 850px) {
+        font-size: 16px;
+    }
+}
+
+.iconWrap {
+    margin-left: 10px;
+    cursor: pointer;
+    padding: 0px 5px;
+    display: flex;
+    align-items: center;
+    transition: all 0.4s ease;
+
+    &_active {
+        transform: rotate(180deg);
+    }
+
+    svg {
+        stroke: #fff;
+    }
+}
+
+.dropdown {
+    position: relative;
+    height: 0px;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.list {
+    display: block;
+    padding-bottom: 7px;
+
+    @media (max-height: 850px) {
+        padding-bottom: 5px;
+    }
+}
+
+.listItem {
+    padding-left: 20px;
+    margin-bottom: 8px;
+
+    @media (max-height: 850px) {
+        padding-left: 15px;
+        margin-bottom: 5px;
+    }
+}

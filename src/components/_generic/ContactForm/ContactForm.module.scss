@@ -1,0 +1,97 @@
+@import "var.scss";
+
+.form {
+    background: #fff;
+    padding: 50px;
+    width: 420px;
+    margin-right: 15px;
+
+    @media (max-width: 768px) {
+        padding: 30px 40px;
+    }
+
+    @media (max-width: 680px) {
+        width: 350px;
+    }
+
+    @media (max-width: 540px) {
+        width: 280px;
+        padding: 30px;
+    }
+}
+
+.title {
+    color: $fontColor;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 135%;
+    display: block;
+    margin-bottom: 20px;
+
+    @media (max-width: 1120px) {
+        font-size: $subtitleFont1120;
+        margin-bottom: 15px;
+        font-size: 23px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+}
+
+.inputs {
+    margin-bottom: 20px;
+}
+
+.footer {
+    display: grid;
+    grid-gap: 20px;
+    grid-auto-flow: row;
+}
+
+.inputWrap {
+    position: relative;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &.textareaWrap {
+        height: unset;
+    }
+
+    &:hover {
+        input::placeholder {
+            color: $greyFontColor;
+        }
+    }
+
+    @media (max-width: 768px) {
+        height: 50px;
+    }
+
+    @media (max-width: 680px) {
+        height: 40px;
+    }
+}
+
+.errorWrapAbsolute {
+    position: absolute;
+    right: 0;
+}
+
+.button {
+    @media (max-width: 768px) {
+        height: 55px;
+    }
+
+    @media (max-width: 540px) {
+        height: 45px;
+        margin: 15px 0 0 0;
+    }
+}

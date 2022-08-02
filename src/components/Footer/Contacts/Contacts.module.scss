@@ -1,0 +1,90 @@
+@import "var.scss";
+
+.wrap {
+    margin-left: auto;
+    width: 380px;
+
+    @media (max-width: 1120px) {
+        max-width: 330px;
+    }
+
+    @media (max-width: 768px) {
+        grid-area: contacts;
+        margin: 0;
+        max-width: 280px;
+    }
+}
+
+.linksWrap {
+    margin-bottom: 130px;
+
+    @media (max-width: 768px) {
+        margin-bottom: 25px;
+    }
+}
+
+.linkContact {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    color: $greenColor;
+    font-size: 37px;
+    font-weight: 600;
+    line-height: 130%;
+
+    &:hover {
+        color: $brightGreenColor;
+    }
+
+    @media (max-width: 1120px) {
+        font-size: 30px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 27px;
+    }
+}
+
+.linksWrapSocials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.linkSocial {
+    svg {
+        fill: #fff;
+    }
+
+    &_WA {
+        svg {
+            &:hover {
+                fill: $brightGreenColor;
+            }
+        }
+    }
+
+    &_TG {
+        svg {
+            &:hover {
+                fill: #35acf1;
+            }
+        }
+    }
+
+    &_YT {
+        svg {
+            &:hover {
+                fill: $lightRedColor;
+            }
+        }
+    }
+
+    &_VK {
+        svg {
+            &:hover {
+                fill: #4081ff;
+            }
+        }
+    }
+}

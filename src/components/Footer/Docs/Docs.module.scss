@@ -1,0 +1,56 @@
+@import "var.scss";
+
+.wrap {
+    margin-left: auto;
+    width: 380px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 1120px) {
+        max-width: 330px;
+    }
+
+    @media (max-width: 768px) {
+        grid-area: docs;
+        justify-content: unset;
+        flex-direction: column;
+        margin: 0;
+        max-width: 280px;
+    }
+}
+
+.link {
+    display: flex;
+
+    &:hover {
+        span {
+            color: $brightGreenColor;
+            border-bottom: 1px solid $brightGreenColor;
+        }
+    }
+
+    @media (max-width: 768px) {
+        margin-bottom: 15px;
+        display: grid;
+        grid-template-columns: 35px 1fr;
+
+        svg {
+            justify-self: center;
+        }
+    }
+}
+
+.textWrap {
+    margin-left: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.text {
+    color: $footerFontColor;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    border-bottom: 1px solid $footerFontColor;
+}

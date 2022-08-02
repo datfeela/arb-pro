@@ -31,6 +31,14 @@ export const validatePhone = (value) => {
     return error;
 };
 
+export const validateEmail = (value) => {
+    let error;
+    if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
+        error = 'Некорректный Email адрес';
+    }
+    return error;
+};
+
 export const validateUrl = (value) => {
     let error;
     if (value.length === 0) { return error }

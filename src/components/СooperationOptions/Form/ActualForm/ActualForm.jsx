@@ -1,14 +1,11 @@
 import s from "./ActualForm.module.scss";
 import { Field, Form, Formik, ErrorMessage } from "formik";
 import { WarningWithPopup } from "../../../_generic/WarningWithPopup/WarningWithPopup";
-import { isRequired, maxLength, minLength, validateName } from "../../../../assets/utils/formValidation";
+import { isRequired, maxLength, minLength, validateName, validatePhone } from "../../../../assets/utils/formValidation";
 import { parseSpacebars } from "../../../../assets/utils/stringParser";
+import { RenderInput } from "../../../_generic/Inputs/Inputs";
 
 export const ActualForm = ({ fields, btnText, submitDesc }) => {
-    const handleNameBlur = (props) => {
-        debugger;
-    };
-
     //validation
     const validateNameField = (value) => {
         value = value.trim();
@@ -22,6 +19,7 @@ export const ActualForm = ({ fields, btnText, submitDesc }) => {
     const validatePhoneField = (value) => {
         value = parseSpacebars(value);
         let error = isRequired(value);
+        if (!error) error = validatePhone(value);
         if (!error) error = minLength(value, 7);
         if (!error) error = maxLength(value, 15);
         return error;
@@ -34,16 +32,17 @@ export const ActualForm = ({ fields, btnText, submitDesc }) => {
 
     return (
         <Formik initialValues={{ name: "", phone: "" }} onSubmit={submit}>
-            {({ isSubmitting, errors }) => (
+            {({ isSubmitting, errors, touched }) => (
                 <Form className={s.form}>
                     <div className={s.inputWrap}>
                         <Field
                             type="text"
                             name="name"
-                            component={RenderField}
+                            component={RenderInput}
                             validate={validateNameField}
                             placeholder={fields.name.placeholder}
                             errors={errors.name}
+                            touched={touched.name}
                         />
                         <div className={s.errorWrapAbsolute}>
                             <ErrorMessage name="name" component={WarningWithPopup} />
@@ -53,19 +52,20 @@ export const ActualForm = ({ fields, btnText, submitDesc }) => {
                         <Field
                             type="text"
                             name="phone"
-                            component={RenderField}
+                            component={RenderInput}
                             validate={validatePhoneField}
                             placeholder={fields.phone.placeholder}
                             errors={errors.phone}
+                            touched={touched.phone}
                         />
                         <div className={s.errorWrapAbsolute}>
                             <ErrorMessage name="phone" component={WarningWithPopup} />
                         </div>
                     </div>
-                    <button className={s.button} type="submit" disabled={isSubmitting}>
+                    <button className={s.button + " formButton"} type="submit" disabled={isSubmitting}>
                         {btnText}
                     </button>
-                    <span className={s.submitDesc}>
+                    <span className={"formSubmitDesc"}>
                         {submitDesc.text}
                         <a href={submitDesc.link.href}>{submitDesc.link.text}</a>
                     </span>
@@ -74,20 +74,3 @@ export const ActualForm = ({ fields, btnText, submitDesc }) => {
         </Formik>
     );
 };
-
-const RenderField = ({ form, field, ...props }) => {
-    return (
-        <input
-            name={field.name}
-            value={field.value}
-            onChange={form.handleChange}
-            checked={field.checked}
-            placeholder={props.placeholder}
-            className={props.errors ? s.input + " " + s.input_error : s.input}
-        />
-    );
-};
-
-// const handleInput = (value) => {
-//     if (/^[0-9.,()%*+-/√]+$/i.test(value) || value === "");
-// };

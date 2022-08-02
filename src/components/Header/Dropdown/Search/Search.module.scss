@@ -1,0 +1,180 @@
+@import "var.scss";
+
+.wrap {
+    width: 100%;
+    position: relative;
+    top: $headerHeight;
+    background-color: $darkGreenColor;
+    overflow: hidden;
+    height: 0px;
+    transition: all 0.5s ease;
+    z-index: 1;
+
+    @media (max-width: 1500px) {
+        padding-left: 40px;
+    }
+
+    @media (max-width: 1120px) {
+        top: $headerHeight1120;
+        padding-left: 40px;
+    }
+
+    @media (max-width: 768px) {
+        top: $headerHeight768;
+        padding-left: $pagePadding;
+    }
+
+    @media (max-width: 480px) {
+        top: $headerHeight480;
+        padding-left: $pagePadding480;
+    }
+
+    a,
+    span,
+    h3 {
+        color: #fff;
+    }
+}
+
+.content {
+    display: block;
+    width: 100%;
+    max-width: $centerAreaMaxSize;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 15px 100px;
+
+    @media (max-width: 1500px) {
+        max-width: unset;
+        padding: 15px 25px 15px 0;
+    }
+
+    @media (max-width: 768px) {
+        padding: 10px 15px 10px 0;
+    }
+}
+
+.form {
+    display: flex;
+    margin-right: 80px;
+    flex-grow: 1;
+
+    @media (max-width: 768px) {
+        margin-right: 20px;
+    }
+
+    @media (max-width: 420px) {
+        margin-right: 10px;
+    }
+}
+
+.inputWrap {
+    flex-grow: 1;
+    margin-right: 40px;
+
+    @media (max-width: 768px) {
+        margin-right: 20px;
+    }
+
+    @media (max-width: 420px) {
+        margin-right: 12px;
+    }
+}
+
+.input {
+    width: 100%;
+    height: 100%;
+    padding: 12px 0 18px 0;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    border-bottom: 3px solid $greenColor;
+
+    &:hover {
+        &::placeholder {
+            color: $whiteColor;
+        }
+    }
+
+    &::placeholder {
+        color: $swampColor;
+    }
+
+    &:autofill {
+        box-shadow: 0 0 0 30px $darkGreenColor inset !important;
+        -webkit-text-fill-color: #fff !important;
+        caret-color: #fff;
+    }
+
+    &_touched {
+        border-bottom: 3px solid $whiteColor;
+    }
+
+    @media (max-width: 768px) {
+        padding: 7px 0 13px 0;
+    }
+
+    @media (max-width: 420px) {
+        padding: 3px 0 9px 0;
+    }
+}
+
+.button {
+    width: 245px;
+    height: 52px;
+    margin: 0;
+
+    &_icon {
+        display: none;
+
+        svg {
+            margin-top: 5px;
+            fill: #fff;
+            height: 20px;
+            width: 20px;
+        }
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+    }
+
+    &_text {
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    @media (max-width: 768px) {
+        width: 44px;
+        height: 44px;
+        border-radius: 3px;
+    }
+
+    @media (max-width: 540px) {
+        width: 40px;
+        height: 40px;
+    }
+    @media (max-width: 420px) {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+.closeButton {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;
+
+    svg {
+        fill: $swampColor;
+
+        &:hover {
+            fill: #ffd8dc;
+        }
+    }
+}

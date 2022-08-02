@@ -1,0 +1,26 @@
+@import "var.scss";
+
+.wrap {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: calc(#{$headerHeight} - 1px);
+    width: 275px;
+    left: -85px;
+    background: $darkGreenColor;
+    z-index: 100;
+}
+
+.list {
+    padding: 20px 30px;
+
+    a {
+        display: block;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 120%;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+}

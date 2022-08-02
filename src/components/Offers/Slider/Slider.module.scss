@@ -1,9 +1,9 @@
 @import "var.scss";
 
-.wrap{
+.wrap {
     display: grid;
     width: 100%;
-    max-width: calc(#{$centerAreaMaxSize} + 2*#{$pagePadding});
+    max-width: calc(#{$centerAreaMaxSize} + 2 *#{$pagePadding});
     grid-template-columns: 5fr 7fr;
     margin: 0 auto;
 
@@ -17,10 +17,10 @@
     }
 }
 
-.articleWrap{
+.articleWrap {
     margin-right: 200px;
 
-    h2{
+    h2 {
         line-height: 130%;
         position: relative;
         top: 50px;
@@ -36,14 +36,20 @@
     }
 
     @media (max-width: 900px) {
-        h2{
+        h2 {
             top: 0;
-            width: 100vw;
+            width: calc(100vw - 2 *#{$pagePadding});
             display: flex;
             flex-wrap: wrap;
-            span{
+            span {
                 margin-right: 10px;
             }
         }
     }
-} 
+
+    @media (max-width: 480px) {
+        h2 {
+            width: calc(100vw - 2 *#{$pagePadding480});
+        }
+    }
+}
