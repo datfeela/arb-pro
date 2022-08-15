@@ -1,10 +1,15 @@
 @import "var.scss";
 
 .wrap{
-    height: 530px;
-    background-color: $footerFontColor;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
 
     @media (max-width: 1120px) {
-        height: 45vw;
+        gap: 25px;
+    }
+
+    @media (max-width: 480px) {
+        gap: 15px;
     }
 }

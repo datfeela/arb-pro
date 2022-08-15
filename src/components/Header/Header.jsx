@@ -33,7 +33,7 @@ export const Header = () => {
     const deactivatePopup = () => {
         setIsPopupActive(false);
     };
-    const initialFormValues = { name: "", phone: "", email: "", message: "" };
+    const initialFormValues = { name: "", phone: "", email: "", message: "Тест" };
     const submitForm = (values) => {
         console.log(values);
     };
@@ -68,6 +68,7 @@ export const Header = () => {
             />
             <PopupFullScreen isPopupActive={isPopupActive} deactivatePopup={deactivatePopup}>
                 <ContactForm
+                    title={formData.title}
                     fields={formData.fields}
                     btnText={formData.submitBtn}
                     submitDesc={formData.submitDesc}

@@ -1,0 +1,154 @@
+@import "var.scss";
+
+.wrap {
+    background: #fff;
+
+    @media (max-width: 1120px) {
+    }
+}
+
+.header {
+    display: grid;
+    grid-template-areas: "img content";
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 55px;
+    align-items: center;
+    border: 1px solid #d9d9d9;
+
+    @media (max-width: 768px) {
+        grid-gap: 30px;
+    }
+
+    @media (max-width: 600px) {
+        align-items: center;
+        padding: 7px 15px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 15px;
+        grid-template-areas:
+            "content"
+            "img";
+        grid-gap: 15px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        align-items: unset;
+    }
+}
+
+.imgWrap {
+    grid-area: img;
+}
+
+.headerImg {
+    @media (max-width: 600px) {
+        max-width: 170px;
+        object-fit: contain;
+    }
+}
+
+.headerContent {
+    padding: 15px 15px 15px 0;
+    grid-area: content;
+
+    @media (max-width: 600px) {
+        padding: 0;
+    }
+}
+
+.title {
+    color: #000;
+    font-size: $subtitleFont;
+    font-weight: 600;
+    margin-bottom: 5px;
+
+    @media (max-width: 1120px) {
+        font-size: $subtitleFont1120;
+    }
+
+    @media (max-width: 600px) {
+        font-size: $subtitleFont480;
+    }
+}
+
+.desc {
+    color: #5c584f;
+    font-size: 20px;
+
+    @media (max-width: 1120px) {
+        font-size: 18px;
+    }
+
+    @media (max-width: 600px) {
+        font-size: 15px;
+    }
+}
+
+.wasResult {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.listWrap {
+    padding: 25px;
+
+    @media (max-width: 900px) {
+        padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 20px 15px;
+    }
+}
+
+.was {
+    .subtitle {
+        color: $redColor;
+    }
+}
+
+.result {
+    background: #e6fcf9;
+
+    .subtitle {
+        color: $darkGreenColor;
+    }
+}
+
+.subtitle {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0 27px;
+    padding: 25px 0;
+    width: 320px;
+    font-size: 16px;
+    color: #fff;
+    background: $darkGreenColor;
+
+    @media (max-width: 768px) {
+        font-size: 15px;
+        margin-top: 15px;
+        padding: 20px 0;
+        width: 280px;
+    }
+
+    @media (max-width: 768px) {
+        width: 200px;
+        padding: 12px 0;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 14px;
+        width: 180px;
+        padding: 10px 0;
+    }
+}

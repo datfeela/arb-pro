@@ -22,7 +22,7 @@
 
 .title {
     color: $fontColor;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 700;
     line-height: 135%;
     display: block;
@@ -31,7 +31,7 @@
     @media (max-width: 1120px) {
         font-size: $subtitleFont1120;
         margin-bottom: 15px;
-        font-size: 23px;
+        font-size: 24px;
     }
 
     @media (max-width: 768px) {
@@ -39,8 +39,8 @@
     }
 
     @media (max-width: 480px) {
-        font-size: 18px;
-        margin-bottom: 10px;
+        font-size: 17px;
+        margin-bottom: 5px;
     }
 }
 

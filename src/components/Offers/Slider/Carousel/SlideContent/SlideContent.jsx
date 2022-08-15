@@ -10,8 +10,8 @@ export const SlideContent = ({ content }) => {
                     <span className={s.surname}>{content.surname}</span>
                 </div>
             </div>
-            {/* <img src={`StrategicPlanning/TopSlider/${content.id}.png`} alt="" /> */}
-            <img className={s.image} src={`StrategicPlanning/TopSlider/1.png`} alt="" />
+            {/* <img src={`StrategicPlanning/TopSlider/.png`} alt="" /> */}
+            <img className={s.image} src={`StrategicPlanning/TopSlider/${content.id}.jpg`} alt="" />
         </div>
     );
 };

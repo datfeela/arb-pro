@@ -36,12 +36,16 @@ export const Advantages = () => {
                         {blocks[0]}
                         {blocks[1]}
                     </div>
-                    {blocks[2]}
+                    <div className={s.blocksWrapInner}>
+                        {blocks[2]}
+                        <button onClick={activatePopup} className={s.button}>
+                            <div className={s.iconWrap}>
+                                <SvgSelector type="arrowCircle" />
+                            </div>
+                            <span className={s.text}>{data.button}</span>
+                        </button>
+                    </div>
                 </div>
-                <button onClick={activatePopup} className={s.button}>
-                    <span className={s.text}>{data.button}</span>
-                    <SvgSelector type="arrowCircle" />
-                </button>
                 <PopupFullScreen isPopupActive={isPopupActive} deactivatePopup={deactivatePopup}>
                     <ContactForm
                         title={data.form.title}

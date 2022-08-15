@@ -15,7 +15,7 @@ export const Cases = () => {
                 <div className={s.titleWrap}>
                     <ArticleTitle title={data.title} />
                 </div>
-                <CasesScreen />
+                <CasesScreen content={data.content} />
             </div>
             <div className={s.footer}>
                 <div className={s.footer__Wrap + " wrapInner"}>

@@ -18,7 +18,7 @@ export const ContactUs = () => {
         setIsPopupActive(false);
     };
 
-    const initialFormValues = { name: "", phone: "", email: "", message: "" };
+    const initialFormValues = { name: "", phone: "", email: "", message: "Тест" };
 
     const submitForm = (values) => {
         console.log(values);
