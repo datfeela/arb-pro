@@ -1,5 +1,8 @@
 @import "var.scss";
 
+$imgWidth: 204px;
+$imgWidth600: 170px;
+
 .wrap {
     background: #fff;
 
@@ -10,7 +13,7 @@
 .header {
     display: grid;
     grid-template-areas: "img content";
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: $imgWidth 1fr;
     grid-gap: 55px;
     align-items: center;
     border: 1px solid #d9d9d9;
@@ -20,6 +23,7 @@
     }
 
     @media (max-width: 600px) {
+        grid-template-columns: $imgWidth600 1fr;
         align-items: center;
         padding: 7px 15px;
     }
@@ -41,8 +45,10 @@
 }
 
 .headerImg {
+    width: $imgWidth;
+
     @media (max-width: 600px) {
-        max-width: 170px;
+        max-width: $imgWidth600;
         object-fit: contain;
     }
 }
