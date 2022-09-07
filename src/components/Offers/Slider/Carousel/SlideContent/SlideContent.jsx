@@ -7,7 +7,7 @@ export const SlideContent = ({ content }) => {
                 <span className={s.circle}></span>
                 <div className={s.nameWrap}>
                     <span className={s.name}>{content.name}</span>
-                    <span className={s.surname}>{content.surname}</span>
+                    {content.surname && <span className={s.surname}>{content.surname}</span>}
                 </div>
             </div>
             {/* <img src={`StrategicPlanning/TopSlider/.png`} alt="" /> */}

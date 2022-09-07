@@ -18,10 +18,11 @@ export const ContactUs = () => {
         setIsPopupActive(false);
     };
 
-    const initialFormValues = { name: "", phone: "", email: "", message: "Тест" };
+    const initialFormValues = {title_form: data.title[0].text, name: "", phone: "", email: "", message: ""};
 
     const submitForm = (values) => {
-        console.log(values);
+        setIsPopupActive(false);
+        alert("Заявка отправлена");
     };
 
     return (
@@ -46,6 +47,7 @@ export const ContactUs = () => {
             </div>
             <PopupFullScreen isPopupActive={isPopupActive} deactivatePopup={deactivatePopup}>
                 <ContactForm
+                    title={data.title[0].text}
                     fields={data.form.fields}
                     btnText={data.form.submitBtn}
                     submitDesc={data.form.submitDesc}

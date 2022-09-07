@@ -33,11 +33,21 @@ export const Header = () => {
     const deactivatePopup = () => {
         setIsPopupActive(false);
     };
-    const initialFormValues = { name: "", phone: "", email: "", message: "Тест" };
-    const submitForm = (values) => {
-        console.log(values);
+
+    const initialFormValues = {
+        title_form: formData.title,
+        name: "",
+        phone: "",
+        email: "",
+        message: "Добрый день! Я хочу понять, куда двигаться дальше, прописать стратегию и подробный план действий на несколько лет вперед",
     };
-    //
+
+    const submitForm = (data) => {
+        if (data === "Y") {
+            setIsPopupActive(false);
+            alert("Заявка отправлена");
+        }
+    };
 
     return (
         <header className={s.headerFixed}>

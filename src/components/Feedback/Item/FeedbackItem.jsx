@@ -1,12 +1,13 @@
-import { useState } from "react";
+// import { useState } from "react";
 import s from "./FeedbackItem.module.scss";
 
 export const FeedbackItem = ({ id, name, desc, text, textExtended }) => {
-    const [isExpanded, setIsExpanded] = useState(false);
+    // debugger;
+    // const [isExpanded, setIsExpanded] = useState(false);
 
-    const handleBtnClick = () => {
-        setIsExpanded(true);
-    };
+    // const handleBtnClick = () => {
+    //     setIsExpanded(true);
+    // };
 
     return (
         <div className={s.wrap}>
@@ -19,11 +20,11 @@ export const FeedbackItem = ({ id, name, desc, text, textExtended }) => {
             </div>
             <div className={s.content}>
                 <span className={s.text}>{text}</span>
-                <span className={isExpanded ? s.text : s.text + " " + s.text_hidden}>{textExtended}</span>
+                {/* <span className={isExpanded ? s.text : s.text + " " + s.text_hidden}>{textExtended}</span> */}
             </div>
-            <button onClick={handleBtnClick} className={isExpanded ? s.expandBtn + " " + s.expandBtn_hidden : s.expandBtn}>
+            {/* <button onClick={handleBtnClick} className={isExpanded ? s.expandBtn + " " + s.expandBtn_hidden : s.expandBtn}>
                 Читать полностью
-            </button>
+            </button> */}
         </div>
     );
 };

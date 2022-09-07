@@ -35,7 +35,7 @@ export const QAItem = ({ id, title, desc, list, activeItemId, setActiveItemId })
             </div>
             <div ref={contentRef} className={isExpanded ? s.content : s.content + " " + s.content_hidden}>
                 <span className={s.desc}>{desc}</span>
-                <List items={list} font="small" />
+                {list && list.length > 0 && <List items={list} font="small" />}
             </div>
         </div>
     );

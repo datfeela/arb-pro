@@ -63,6 +63,12 @@
     }
 }
 
+.textWrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .subtitle {
     color: #fff;
     font-size: $subtitleFont;

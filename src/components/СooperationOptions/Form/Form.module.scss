@@ -152,7 +152,7 @@ $circleLeft1080: 85px;
 
 .content {
     margin-left: 24px;
-    max-width: 150px;
+    max-width: 160px;
 
     @media (max-width: 540px) {
         margin: 0 0 60px 55px;
@@ -196,6 +196,7 @@ $circleLeft1080: 85px;
     position: relative;
     z-index: 1;
     height: 380px;
+    right: -68px;
 
     @media (max-width: 1080px) {
         height: 290px;

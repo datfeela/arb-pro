@@ -2,9 +2,23 @@
 
 .image {
     margin-bottom: 39px;
+    width: 100%;
 
     @media (max-width: 525px) {
         margin-bottom: 15px;
+    }
+}
+
+.imageHighRes {
+    @media (max-width: 1000px) {
+        display: none;
+    }
+}
+
+.imageLowRes {
+    display: none;
+    @media (max-width: 1000px) {
+        display: block;
     }
 }
 

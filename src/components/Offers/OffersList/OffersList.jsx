@@ -10,8 +10,8 @@ export const OffersList = ({ data }) => {
                     <li className={s.listItem} key={item.id}>
                         <span className={s.id}>{`${item.id}.`}</span>
                         <div className={s.textWrap}>
-                            <h3 className={s.subtitle}>{item.title}</h3>
-                            <span className={s.text}>{item.desc}</span>
+                            {item.title && <h3 className={s.subtitle}>{item.title}</h3>}
+                            {item.desc && <span className={s.text}>{item.desc}</span>}
                         </div>
                     </li>
                 ))}

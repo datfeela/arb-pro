@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import s from "./Option.module.scss";
-import { Layout, Theme } from "../../../assets/styled/theme";
 import { List } from "../../_generic/List/List";
 
 export const Option = ({ data, reversed }) => {
@@ -13,7 +12,7 @@ export const Option = ({ data, reversed }) => {
             </div>
             <div className={s.contentWrap + " " + s.content}>
                 <span className={s.idSpan + " " + s.empty}>{data.id}</span>
-                <List items={data.desc} />
+                {data.desc && <List items={data.desc} />}
             </div>
         </Wrap>
     );

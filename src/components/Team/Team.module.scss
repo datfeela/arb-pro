@@ -33,42 +33,44 @@
     }
 }
 
-.members {
+.members1 {
+    display: grid;
+    justify-content: space-between;
+    grid-row-gap: 60px;
+    margin-bottom: 85px;
+    grid-template-columns: repeat(3, auto);
+    grid-template-areas: "m1 m2 m3";
+
+    @media (max-width: 1000px) {
+        justify-content: center;
+        grid-template-columns: repeat(1, auto);
+        grid-template-areas:
+            "m1"
+            "m2"
+            "m3";
+    }
+}
+
+.members2 {
     display: grid;
     grid-row-gap: 60px;
-        grid-template-columns: repeat(4, auto);
-    grid-template-areas:
-        "m1 m2 m3 m4"
-        ". m5 m6 m7";
+    grid-template-columns: repeat(4, auto);
+    grid-template-areas: "m4 m5 m6 m7";
     justify-content: space-between;
 
-    @media (max-width: 1120px) {
-        grid-template-columns: repeat(3, auto);
+    @media (max-width: 1000px) {
+        justify-content: center;
+        grid-template-columns: repeat(1, auto);
         grid-template-areas:
-            "m1 m2 m3"
-            "m4 m5 m6"
-            ". . m7";
+            "m4"
+            "m5"
+            "m6"
+            "m7";
     }
+}
 
-    @media (max-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            "m1 m2"
-            "m3 m4"
-            "m5 m6"
-            ". m7";
-    }
-
-    @media (max-width: 600px) {
-        grid-template-columns: repeat(2, auto);
-    }
-
-    @media (max-width: 525px) {
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 12px;
-    }
-
-    @media (max-width: 400px) {
-        grid-template-columns: repeat(2, auto);
+.content {
+    @media (max-width: 1000px) {
+        display: flex;
     }
 }
