@@ -4,7 +4,8 @@ export const Theme = {
     lightRedColor: '#F4364C',
     swampColor: '#A4BDBA',
     darkGreenColor: "#007367",
-    greenColor: "#00ACA8"
+    greenColor: "#00ACA8",
+    lightGreenColor: "#24EE9D"
 }
 
 export const Layout = {

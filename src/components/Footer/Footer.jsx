@@ -7,15 +7,7 @@ import { Docs } from "./Docs/Docs";
 import { Nav } from "./Nav/Nav";
 
 export const Footer = () => {
-    const data = useContext(AppContext).state.footer;
-
-    const scrollUp = () => {
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "smooth",
-        });
-    };
+    const data = useContext(AppContext).state.layouts.footer;
 
     return (
         <footer className={s.footer}>

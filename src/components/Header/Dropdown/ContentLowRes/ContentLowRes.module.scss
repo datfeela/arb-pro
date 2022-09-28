@@ -8,18 +8,21 @@
     overflow: hidden;
     height: 0px;
     transition: all 0.5s ease;
-    padding: $headerHeight 0 0 40px;
+    padding-left: 40px;
+    margin-top: $headerHeight;
 
     @media (max-width: 1120px) {
-        padding: $headerHeight1120 0 0 40px;
+        margin-top: $headerHeight1120;
     }
 
     @media (max-width: 768px) {
-        padding: $headerHeight768 0 0 $pagePadding;
+        padding-left: $pagePadding;
+        margin-top: $headerHeight768;
     }
 
     @media (max-width: 480px) {
-        padding: $headerHeight480 0 0 $pagePadding480;
+        padding-left: $pagePadding480;
+        margin-top: $headerHeight480;
     }
 
     &_active {
@@ -35,6 +38,10 @@
                 width: 0;
             }
         }
+    }
+
+    &_bright {
+        background: $brightGreenColor;
     }
 
     a,

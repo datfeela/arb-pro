@@ -29,7 +29,11 @@
     display: flex;
     justify-content: space-between;
     position: fixed;
-    background-color: #fff;
+    background: #fff;
+
+    &_transparent{
+        background: transparent;
+    }
 
     @media (min-width: 1936px) and (max-width: 1952px) {
         margin-left: calc(100vw - 1936px);

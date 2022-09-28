@@ -1,13 +1,13 @@
 import { ActualForm } from "./ActualForm/ActualForm";
 import s from "./Form.module.scss";
 
-export const Form = ({ title, fields, btnText, submitDesc, addInfo }) => {
+export const Form = ({ title, fields, btnText, submitDesc, addInfo, yaMetricsFn }) => {
     return (
         <div className={s.wrap}>
             <div className={s.wrapAbsolute}>
                 <div className={s.leftWrap}>
                     <h3 className={s.title}>{title}</h3>
-                    <ActualForm fields={fields} btnText={btnText} submitDesc={submitDesc} />
+                    <ActualForm fields={fields} btnText={btnText} submitDesc={submitDesc} yaMetricsFn={yaMetricsFn} />
                 </div>
                 <div className={s.rightWrap}>
                     <div className={s.circle}>

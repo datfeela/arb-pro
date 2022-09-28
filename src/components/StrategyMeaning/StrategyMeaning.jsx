@@ -5,7 +5,7 @@ import { ArticleTitle } from "../_generic/ArticleTitle/ArticleTitle";
 import { StrategyItem } from "./StrategyItem/StrategyItem";
 
 export const StrategyMeaning = () => {
-    const data = useContext(AppContext).state.strategyMeaning;
+    const data = useContext(AppContext).state.layouts.strategy.strategyMeaning;
     let blocks;
     if (data.content.list && data.content.list.length > 0) blocks = data.content.list.map((block) => <StrategyItem key={block.id} data={block} />);
 

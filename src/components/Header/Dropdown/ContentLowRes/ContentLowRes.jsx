@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavItem } from "./NavItem/NavItem";
 import s from "./ContentLowRes.module.scss";
 
-export const ContentLowRes = ({ isBurgerActive, items }) => {
+export const ContentLowRes = ({ isBurgerActive, items, color }) => {
     const [activeItemId, setActiveItemId] = useState(null);
 
     const listItems = items.map((item) => (
@@ -18,7 +18,7 @@ export const ContentLowRes = ({ isBurgerActive, items }) => {
     ));
 
     return (
-        <div className={isBurgerActive ? s.wrap + " " + s.wrap_active : s.wrap}>
+        <div className={s.wrap + (isBurgerActive ? " " + s.wrap_active : "") + (color === "brightGreen" ? " " + s.wrap_bright : "")}>
             <ul className={s.content}>{listItems}</ul>
         </div>
     );

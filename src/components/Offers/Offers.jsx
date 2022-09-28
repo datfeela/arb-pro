@@ -5,8 +5,8 @@ import s from "./Offers.module.scss";
 import { OffersList } from "./OffersList/OffersList";
 
 export const Offers = () => {
-    const sliderData = useContext(AppContext).state.topSlider;
-    const data = useContext(AppContext).state.offers;
+    const sliderData = useContext(AppContext).state.layouts.strategy.topSlider;
+    const data = useContext(AppContext).state.layouts.strategy.offers;
     return (
         <>
             <div className={s.wrap + " wrap"}>

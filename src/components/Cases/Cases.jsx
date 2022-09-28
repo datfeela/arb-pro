@@ -6,7 +6,7 @@ import { CasesScreen } from "./CasesScreen/CasesScreen";
 import { SvgSelector } from "../_generic/SvgSelector/SvgSelector";
 
 export const Cases = () => {
-    const data = useContext(AppContext).state.cases;
+    const data = useContext(AppContext).state.layouts.strategy.cases;
     const footerText = data.footerText.map((item) => <span className={item.bold ? s.text + " " + s.text_bold : s.text}>{item.text}</span>);
 
     return (

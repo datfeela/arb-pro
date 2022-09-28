@@ -7,21 +7,23 @@ export const Docs = ({ docs }) => {
             <a className={s.link} target="_blank" rel="noreferrer" href={docs.booklet.link}>
                 <SvgSelector type="pdf-down" />
                 <div className={s.textWrap}>
-                    {docs.booklet.title.map((item) => (
-                        <span className={s.text}>{item}</span>
+                    {docs.booklet.title.map((item, index) => (
+                        <span className={s.text} key={index}>
+                            {item}
+                        </span>
                     ))}
                 </div>
             </a>
             <a className={s.link} target="_blank" rel="noreferrer" href={docs.logo.link}>
                 <SvgSelector type="logo-down" />
                 <div className={s.textWrap}>
-                    {docs.logo.title.map((item) => (
-                        <span className={s.text}>{item}</span>
+                    {docs.logo.title.map((item, index) => (
+                        <span className={s.text} key={index}>
+                            {item}
+                        </span>
                     ))}
                 </div>
             </a>
         </div>
     );
 };
-
-

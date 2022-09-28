@@ -5,13 +5,17 @@
     position: relative;
     top: $headerHeight;
     left: 0;
-    background-color: $darkGreenColor;
+    background: $darkGreenColor;
     overflow: hidden;
     height: 0px;
     transition: all 0.5s ease;
 
     @media (max-width: 1500px) {
         display: none;
+    }
+
+    &_bright {
+        background: $brightGreenColor;
     }
 }
 

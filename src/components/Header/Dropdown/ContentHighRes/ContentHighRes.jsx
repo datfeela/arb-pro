@@ -3,9 +3,9 @@ import { setBlockHeight } from "../../../../assets/utils/setBlockHeight";
 import { SvgSelector } from "../../../_generic/SvgSelector/SvgSelector";
 import s from "./ContentHighRes.module.scss";
 
-export const ContentHighRes = ({ isBurgerActive, usefulList, aboutList, contacts }) => {
-    const usefulItems = usefulList.items.map((item) => (
-        <li className={item.icon ? s.item + " " + s.item_withIcon : s.item}>
+export const ContentHighRes = ({ isBurgerActive, usefulList, aboutList, contacts, color }) => {
+    const usefulItems = usefulList.items.map((item, index) => (
+        <li className={item.icon ? s.item + " " + s.item_withIcon : s.item} key={index}>
             <a href={item.link} className={s.link}>
                 {item.icon && <SvgSelector type={item.icon} />}
                 {item.title}
@@ -13,9 +13,9 @@ export const ContentHighRes = ({ isBurgerActive, usefulList, aboutList, contacts
         </li>
     ));
 
-    const aboutItems = aboutList.items.map((item) => {
+    const aboutItems = aboutList.items.map((item, index) => {
         return (
-            <li className={item.icon ? s.item + " " + s.item_withIcon : s.item}>
+            <li className={item.icon ? s.item + " " + s.item_withIcon : s.item} key={index}>
                 <a href={item.link} className={s.link}>
                     {item.icon && <SvgSelector type={item.icon} />}
                     {item.title}
@@ -33,7 +33,7 @@ export const ContentHighRes = ({ isBurgerActive, usefulList, aboutList, contacts
     }, [isBurgerActive]);
 
     return (
-        <div ref={contentRef} className={s.wrapAbsolute}>
+        <div ref={contentRef} className={s.wrapAbsolute + (color === "brightGreen" ? " " + s.wrapAbsolute_bright : "")}>
             <div className={s.wrap}>
                 <div className={s.listWrap + " " + s.listWrap_useful}>
                     <h3 className={s.title}>{usefulList.title}</h3>

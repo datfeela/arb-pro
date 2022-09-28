@@ -1,0 +1,79 @@
+@import "var.scss";
+
+.wrap {
+    position: relative;
+    padding: 80px 0 120px 0;
+
+    @media (max-width: 1120px) {
+        padding: 50px 0 70px 0;
+    }
+
+    @media (max-width: 768px) {
+        padding: 30px 0 40px 0;
+    }
+
+    @media (max-width: 480px) {
+        padding: 25px 0 30px 0;
+    }
+}
+
+.titleWrap {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 70px;
+
+    @media (max-width: 1120px) {
+        margin-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+        margin-bottom: 20px;
+    }
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 19px 26px;
+    border: 2px solid $redColor;
+    border-radius: 62.5px;
+
+    @media (max-width: 768px) {
+        padding: 12px 15px;
+    }
+
+    svg {
+        @media (max-width: 768px) {
+            height: 21px;
+            width: 21px;
+        }
+    }
+}
+
+.sliderWrap {
+}
+
+.sliderMain {
+    position: relative;
+    margin-bottom: 55px;
+
+    @media (max-width: 1120px) {
+        margin-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+        margin-bottom: 20px;
+    }
+}
+
+.sliderThumbs {
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.previewImg {
+    width: 100%;
+}

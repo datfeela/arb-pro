@@ -1,0 +1,30 @@
+@import "var.scss";
+
+.title {
+    display: block;
+    max-width: fit-content;
+    padding: 7px 20px;
+    border-radius: 29px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #fff;
+    background: $lightRedColor;
+    margin-bottom: 20px;
+
+    &_green {
+        background: $greenColor;
+    }
+
+    &_brightGreen {
+        color: #0a0a0a;
+        background: $brightGreenColor;
+    }
+}
+
+.desc {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 133.4%;
+    color: #ffffff;
+}

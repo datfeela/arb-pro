@@ -12,6 +12,7 @@ export const Dropdown = ({
     searchBlockData,
     isSearchActive,
     toggleActivateSearch,
+    color,
 }) => {
     return (
         <div className={s.wrap}>
@@ -21,9 +22,20 @@ export const Dropdown = ({
                 isSearchActive={isSearchActive}
                 isBurgerActive={isBurgerActive}
                 toggleActivateSearch={toggleActivateSearch}
+                color={color}
             />
-            <ContentHighRes isSearchActive isBurgerActive={isBurgerActive} usefulList={usefulList} aboutList={aboutList} contacts={contacts} />
-            <ContentLowRes items={contentLowRes} isBurgerActive={isBurgerActive} />
+            <ContentHighRes
+                isSearchActive
+                isBurgerActive={isBurgerActive}
+                usefulList={usefulList}
+                aboutList={aboutList}
+                contacts={contacts}
+                color={color}
+            />
+            <ContentLowRes
+                items={contentLowRes} 
+                isBurgerActive={isBurgerActive}
+                color={color} />
         </div>
     );
 };

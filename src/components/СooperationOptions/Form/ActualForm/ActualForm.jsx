@@ -7,8 +7,8 @@ import { isRequired, maxLength, minLength, validateName, validatePhone } from ".
 import { parseSpacebars } from "../../../../assets/utils/stringParser";
 import { RenderInput } from "../../../_generic/Inputs/Inputs";
 
-export const ActualForm = ({ fields, btnText, submitDesc }) => {
-    const data = useContext(AppContext).state.cooperation;
+export const ActualForm = ({ fields, btnText, submitDesc, yaMetricsFn }) => {
+    const data = useContext(AppContext).state.layouts.strategy.cooperation;
 
     //validation
     const validateNameField = (value) => {
@@ -32,6 +32,7 @@ export const ActualForm = ({ fields, btnText, submitDesc }) => {
     // todo: split request from view
 
     async function submit(values, actions) {
+        yaMetricsFn();
         let dataForm = new FormData();
 
         for (let [name, value] of Object.entries(values)) {

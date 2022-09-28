@@ -5,7 +5,7 @@ import { ArticleTitle } from "../_generic/ArticleTitle/ArticleTitle";
 import { Stage } from "./Stage/Stage";
 
 export const Stages = () => {
-    const data = useContext(AppContext).state.stages;
+    const data = useContext(AppContext).state.layouts.strategy.stages;
     const blocks = data.list.map((block) => <Stage key={block.id} data={block} />);
 
     return (

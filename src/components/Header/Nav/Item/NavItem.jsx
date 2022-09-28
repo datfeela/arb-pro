@@ -4,12 +4,12 @@ import { SvgSelector } from "../../../_generic/SvgSelector/SvgSelector";
 import { Dropdown } from "./Dropdown/Dropdown";
 import s from "./NavItem.module.scss";
 
-export const NavItem = ({ item }) => {
+export const NavItem = ({ item, color }) => {
     let itemClass = s.item;
     if (item.list) itemClass += " " + s.item_withSublist;
     else itemClass += " " + s.item_empty;
 
-    const contentRef = useRef()
+    const contentRef = useRef();
 
     return (
         <li
@@ -21,12 +21,12 @@ export const NavItem = ({ item }) => {
             }}
             className={itemClass}
         >
-            <a className={s.link} href={item.link}>
+            <a className={s.link + (color === "brightGreen" ? " " + s.link_bright : "")} href={item.link}>
                 {item.name}
             </a>
             {item.list && (
                 <>
-                    <div className={s.iconWrap}>
+                    <div className={s.iconWrap + (color === "brightGreen" ? " " + s.iconWrap_bright : "")}>
                         <SvgSelector type="arrow" />
                     </div>
                     <Dropdown contentRef={contentRef} item={item} />

@@ -9,8 +9,13 @@ import { PopupFullScreen } from "../_generic/PopupFullScreen/PopupFullScreen";
 import { ContactForm } from "../_generic/ContactForm/ContactForm";
 import { Dropdown } from "./Dropdown/Dropdown";
 
-export const Header = () => {
-    const data = useContext(AppContext).state.header;
+export const Header = ({ page }) => {
+    const yaMetricsFn = () => {
+        // eslint-disable-next-line no-undef
+        ym(24445127, "reachGoal", "strategy-ostavit-zayavku");
+    };
+
+    const data = useContext(AppContext).state.layouts.header;
 
     // is burger menu active
     const [isBurgerActive, setIsBurgerActive] = useState(false);
@@ -25,7 +30,7 @@ export const Header = () => {
     };
 
     // popup form
-    const formData = useContext(AppContext).state.contact.form;
+    const formData = data.form;
     const [isPopupActive, setIsPopupActive] = useState(false);
     const activatePopup = () => {
         setIsPopupActive(true);
@@ -49,17 +54,20 @@ export const Header = () => {
         }
     };
 
+    const themeColor = page === "invincibility" && "brightGreen";
+
     return (
         <header className={s.headerFixed}>
-            <div className={s.content}>
+            <div className={s.content + (page === "invincibility" ? " " + s.content_transparent : "")}>
                 <div className={s.leftSide}>
                     <a className={s.logo} href="https://arb-pro.ru/">
-                        <SvgSelector type="headerLogo" />
+                        <SvgSelector type={page === "invincibility" ? "headerLogoWhite" : "headerLogo"} />
                     </a>
-                    <Burger isBurgerActive={isBurgerActive} toggleActivate={toggleActivateBurger} />
+                    <Burger color={themeColor} isBurgerActive={isBurgerActive} toggleActivate={toggleActivateBurger} />
                 </div>
-                <Nav isBurgerActive={isBurgerActive} items={data.nav}></Nav>
+                <Nav color={themeColor} isBurgerActive={isBurgerActive} items={data.nav}></Nav>
                 <Actions
+                    color={themeColor}
                     buttonText={data.buttonText}
                     activatePopup={activatePopup}
                     isSearchActive={isSearchActive}
@@ -67,6 +75,7 @@ export const Header = () => {
                 ></Actions>
             </div>
             <Dropdown
+                color={themeColor}
                 isBurgerActive={isBurgerActive}
                 usefulList={data.menu.useful}
                 aboutList={data.menu.about}
@@ -84,6 +93,7 @@ export const Header = () => {
                     submitDesc={formData.submitDesc}
                     submitForm={submitForm}
                     initialFormValues={initialFormValues}
+                    yaMetricsFn={yaMetricsFn}
                 />
             </PopupFullScreen>
         </header>

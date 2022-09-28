@@ -29,6 +29,10 @@
         padding-left: $pagePadding480;
     }
 
+    &_bright {
+        background: $brightGreenColor;
+    }
+
     a,
     span,
     h3 {

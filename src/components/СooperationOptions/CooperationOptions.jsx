@@ -6,7 +6,11 @@ import { Option } from "./Option/Option";
 import { Form } from "./Form/Form";
 
 export const CooperationOptions = () => {
-    const data = useContext(AppContext).state.cooperation;
+    const yaMetricsFn = () => {
+        // eslint-disable-next-line no-undef
+        ym(24445127, "reachGoal", "strategy-obsudit-variant");
+    };
+    const data = useContext(AppContext).state.layouts.strategy.cooperation;
     let isReversed = false;
     const blocks = data.list.map((block) => {
         const reversed = isReversed;
@@ -27,6 +31,7 @@ export const CooperationOptions = () => {
                     btnText={data.form.submitBtn}
                     submitDesc={data.form.submitDesc}
                     addInfo={data.form.circleInfo}
+                    yaMetricsFn={yaMetricsFn}
                 />
             </div>
         </div>

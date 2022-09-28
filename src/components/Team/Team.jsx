@@ -5,7 +5,7 @@ import { ArticleTitle } from "../_generic/ArticleTitle/ArticleTitle";
 import { Member } from "./Member/Member";
 
 export const Team = () => {
-    const data = useContext(AppContext).state.team;
+    const data = useContext(AppContext).state.layouts.strategy.team;
 
     const items1 = data.members.slice(0, 3).map((item) => <Member key={item.id} id={item.id} name={item.name} desc={item.desc} doubleImg={true} />);
     const items2 = data.members.slice(3).map((item) => <Member key={item.id} id={item.id} name={item.name} desc={item.desc} />);

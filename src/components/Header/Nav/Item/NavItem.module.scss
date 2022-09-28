@@ -56,6 +56,10 @@
         width: 7px;
         height: 7px;
     }
+
+    &_bright {
+        color: $brightGreenColor;
+    }
 }
 
 .iconWrap {
@@ -73,6 +77,9 @@
         stroke: $darkGreenColor;
     }
 
-    @media (max-width: 1500px) {
+    &_bright {
+        svg {
+            stroke: $brightGreenColor;
+        }
     }
 }

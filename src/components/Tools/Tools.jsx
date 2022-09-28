@@ -5,7 +5,7 @@ import { ArticleTitle } from "../_generic/ArticleTitle/ArticleTitle";
 import { Tool } from "./Tool/Tool";
 
 export const Tools = () => {
-    const data = useContext(AppContext).state.tools;
+    const data = useContext(AppContext).state.layouts.strategy.tools;
     const blocks = data.list.map((block) => {
         return <Tool key={block.id} data={block} />;
     });

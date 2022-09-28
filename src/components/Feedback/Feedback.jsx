@@ -6,7 +6,7 @@ import { SvgSelector } from "../_generic/SvgSelector/SvgSelector";
 import { FeedbackItem } from "./Item/FeedbackItem";
 
 export const Feedback = () => {
-    const data = useContext(AppContext).state.feedback;
+    const data = useContext(AppContext).state.layouts.strategy.feedback;
     const items = data.items.map((item) => (
         <FeedbackItem key={item.id} id={item.id} name={item.name} desc={item.desc} text={item.text} textExtended={item.textExtended} />
     ));

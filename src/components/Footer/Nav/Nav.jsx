@@ -2,17 +2,17 @@ import styled from "styled-components";
 import { FooterTheme, Theme } from "../../../assets/styled/theme";
 
 export const Nav = ({ title, items }) => {
-    
-
     return (
         <nav>
             <Title>{title}</Title>
             <List>
-                {items.map((item) => (
-                    <li>
-                        <Link href={item.link}>{item.title}</Link>
-                    </li>
-                ))}
+                {items.map((item, index) => {
+                    return (
+                        <li key={index}>
+                            <Link href={item.link}>{item.title}</Link>
+                        </li>
+                    );
+                })}
             </List>
         </nav>
     );
@@ -26,9 +26,7 @@ const Title = styled.h3`
     margin-bottom: 14px;
 `;
 
-const List = styled.ul`
-
-`
+const List = styled.ul``;
 const Link = styled.a`
     font-size: 15px;
     line-height: 170%;

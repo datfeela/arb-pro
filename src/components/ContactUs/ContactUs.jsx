@@ -6,7 +6,12 @@ import { PopupFullScreen } from "../_generic/PopupFullScreen/PopupFullScreen";
 import { ContactForm } from "../_generic/ContactForm/ContactForm";
 
 export const ContactUs = () => {
-    const data = useContext(AppContext).state.contact;
+    const yaMetricsFn = () => {
+        // eslint-disable-next-line no-undef
+        ym(24445127, "reachGoal", "strategy-svyazatsa-s-nami");
+    };
+
+    const data = useContext(AppContext).state.layouts.strategy.contact;
 
     const [isPopupActive, setIsPopupActive] = useState(false);
 
@@ -53,6 +58,7 @@ export const ContactUs = () => {
                     submitDesc={data.form.submitDesc}
                     submitForm={submitForm}
                     initialFormValues={initialFormValues}
+                    yaMetricsFn={yaMetricsFn}
                 />
             </PopupFullScreen>
         </div>

@@ -4,7 +4,7 @@ import { setBlockHeight } from "../../../../assets/utils/setBlockHeight";
 import { SvgSelector } from "../../../_generic/SvgSelector/SvgSelector";
 import s from "./Search.module.scss";
 
-export const Search = ({ buttonText, inputPlaceholder, isSearchActive, toggleActivateSearch }) => {
+export const Search = ({ buttonText, inputPlaceholder, isSearchActive, toggleActivateSearch, color }) => {
     const searchRef = useRef();
 
     useEffect(() => {
@@ -19,7 +19,7 @@ export const Search = ({ buttonText, inputPlaceholder, isSearchActive, toggleAct
     };
 
     return (
-        <div ref={searchRef} className={s.wrap}>
+        <div ref={searchRef} className={s.wrap + (color === "brightGreen" ? " " + s.wrap_bright : "")}>
             <div className={s.content}>
                 <Formik initialValues={{ search: "" }} onSubmit={submit}>
                     {({ isSubmitting }) => (

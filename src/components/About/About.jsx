@@ -5,7 +5,7 @@ import { ArticleTitle } from "../_generic/ArticleTitle/ArticleTitle";
 import { AboutItem } from "./Item/AboutItem";
 
 export const About = () => {
-    const data = useContext(AppContext).state.about;
+    const data = useContext(AppContext).state.layouts.strategy.about;
 
     const items = data.items.map((item) => <AboutItem key={item.id} num={item.num} textTop={item.textTop} desc={item.desc} />);
 

@@ -1,0 +1,51 @@
+@import "var.scss";
+
+.wrap {
+    position: relative;
+    display: grid;
+    grid-template-columns: 31fr 20fr;
+    gap: 43px;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+.video {
+    height: 380px;
+
+    iframe {
+        height: 100%;
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        height: 65vw;
+        max-height: 320px;
+    }
+}
+
+.content {
+}
+
+.title {
+    display: block;
+    color: #333333;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 133.4%;
+    margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+}
+
+.desc {
+    color: #333333;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 133.4%;
+}

@@ -4,7 +4,7 @@ import { AppContext } from "../../context";
 import { Advantage } from "./Advantage/Advantage";
 
 export const Advantages = () => {
-    const data = useContext(AppContext).state.advantages;
+    const data = useContext(AppContext).state.layouts.strategy.advantages;
     const blocks = data.list.map((block) => {
         return <Advantage key={block.id} data={block} />;
     });

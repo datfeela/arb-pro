@@ -6,57 +6,7 @@ import { RenderInput, RenderTextarea } from "../Inputs/Inputs";
 import { WarningWithPopup } from "../WarningWithPopup/WarningWithPopup";
 import s from "./ContactForm.module.scss";
 
-// class Contact extends React.Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             contactTitle: '',
-//             contactName: '',
-//             contactTelephone: '',
-//             contactEmail: '',
-//             contactMessage: 'Добрый день! Я хочу понять, куда двигаться дальше, прописать стратегию и подробный план действий на несколько лет вперед',
-//         };
-
-//         this._handleSubmit = this._handleSubmit.bind(this);
-//         this._handleChange = this._handleChange.bind(this);
-//         this._handleChangeMsg = this._handleChangeMsg.bind(this);
-//         this._handleChangeTitle = this._handleChangeTitle.bind(this);
-//         this._handleChangeName = this._handleChangeName.bind(this);
-//         this._handleChangeTelephone = this._handleChangeTelephone.bind(this);
-//     }
-
-//     _handleChange(event) {
-//         this.setState({
-//             contactEmail: event.target.value,
-//         });
-//     }
-
-//     _handleChangeMsg(event) {
-//         this.setState({
-//             contactMessage: event.target.value
-//         });
-//     }
-
-//     _handleChangeTitle(event) {
-//         this.setState({
-//             contactTitle: event.target.value
-//         });
-//     }
-    
-//     _handleChangeName(event) {
-//         this.setState({
-//             contactName: event.target.value
-//         });
-//     }
-
-//     _handleChangeTelephone(event) {
-//         this.setState({
-//             contactTelephone: event.target.value
-//         });
-//     }
-// }
-
-export const ContactForm = ({ title, fields, btnText, submitDesc, submitForm, initialFormValues }) => {
+export const ContactForm = ({ title, fields, btnText, submitDesc, submitForm, initialFormValues, yaMetricsFn}) => {
     const validateNameField = (value) => {
         value = value.trim();
         let error = isRequired(value);
@@ -95,6 +45,8 @@ export const ContactForm = ({ title, fields, btnText, submitDesc, submitForm, in
         // const submit = (values, actions) => {
         // submitForm(values);
         actions.setSubmitting(false);
+
+        yaMetricsFn();
 
         let dataForm = new FormData();
 

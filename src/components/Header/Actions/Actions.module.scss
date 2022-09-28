@@ -9,8 +9,14 @@
     margin: 5px 26px 0 0;
     width: 22px;
 
-    svg{
+    svg {
         fill: $darkGreenColor;
+    }
+
+    &_bright {
+        svg {
+            fill: $brightGreenColor;
+        }
     }
 }
 
@@ -49,6 +55,12 @@
         line-height: 125%;
     }
 
+    &_bright {
+        &::after {
+            background: $brightGreenColor;
+        }
+    }
+
     @media (max-width: 1120px) {
         padding: 12px 0;
         width: 192px;
@@ -76,7 +88,7 @@
     display: none;
     padding: 10px;
 
-    svg{
+    svg {
         width: 22px;
         height: 22px;
     }

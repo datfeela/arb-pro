@@ -5,7 +5,7 @@ import { ArticleTitle } from "../_generic/ArticleTitle/ArticleTitle";
 import { QAItem } from "./Item/QAItem";
 
 export const QA = () => {
-    const data = useContext(AppContext).state.QA;
+    const data = useContext(AppContext).state.layouts.strategy.QA;
 
     const [activeItemId, setActiveItemId] = useState(data.items[0].id);
 

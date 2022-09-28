@@ -1,18 +1,38 @@
+@import "var.scss";
+
 .title {
-    font-size: 56px;
+    font-size: $titleFont;
     font-weight: 600;
-    line-height: 150%;
+    line-height: 125%;
 
     @media (max-width: 1120px) {
-        font-size: 40px;
+        font-size: $titleFont1120;
     }
 
     @media (max-width: 768px) {
-        font-size: 34px;
+        font-size: $titleFont768;
     }
 
     @media (max-width: 480px) {
-        font-size: 28px;
+        font-size: $titleFont480;
+    }
+}
+
+.titleMd {
+    font-size: $titleMdFont;
+    font-weight: 600;
+    line-height: 125%;
+
+    @media (max-width: 1120px) {
+        font-size: $titleMdFont1120;
+    }
+
+    @media (max-width: 768px) {
+        font-size: $titleMdFont768;
+    }
+
+    @media (max-width: 480px) {
+        font-size: $titleMdFont480;
     }
 }
 
