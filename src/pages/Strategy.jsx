@@ -14,6 +14,7 @@ import { ContactUs } from "../components/ContactUs/ContactUs";
 import { QA } from "../components/QA/QA";
 import { getStrategyHeader, getStrategyLayout } from "../api/api";
 import { Header } from "../components/Header/Header";
+import { Helmet } from "react-helmet";
 
 export const Strategy = () => {
     const context = useContext(AppContext);
@@ -29,6 +30,10 @@ export const Strategy = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Cтратегическое планирование</title>
+                <meta name="description" content="Cтратегическое планирование" />
+            </Helmet>
             {context.state.isHeaderLoaded === false && <div></div>}
             {context.state.isHeaderLoaded === true && <Header page="strategy" />}
             {context.state.isStrategyLayoutLoaded === false && <div></div>}

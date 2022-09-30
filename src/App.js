@@ -2,8 +2,8 @@ import "./App.scss";
 import { useContext, useEffect } from 'react';
 import { Footer } from './components/Footer/Footer';
 import { AppContext } from './context';
-// import { Strategy } from "./pages/Strategy";
-// import { createBrowserRouter, Route, RouterProvider, Routes } from "react-router-dom";
+import { Strategy } from "./pages/Strategy";
+import { createBrowserRouter, Route, RouterProvider, Routes } from "react-router-dom";
 import { getFooter } from "./api/api";
 import { Invincibility } from "./pages/Invincibility";
 
@@ -18,23 +18,24 @@ function App() {
     fetchData();
   }, []);
 
-  // todo: errorElements for routes, when actually adding router
+  // todo: add errorElements for routes
+  // todo: fix date dependencies(where it's needed)
 
-  // const router = createBrowserRouter([
-  //   {
-  //     path: "/",
-  //     element: <Invincibility />,
-  //   },
-  //   {
-  //     path: "/strategy",
-  //     element: <Strategy />,
-  //   },
-  // ]);
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Invincibility />,
+    },
+    {
+      path: "/strategy",
+      element: <Strategy />,
+    },
+  ]);
 
   return (
     <>
       <div className="App">
-        {/* <RouterProvider router={router} /> */}
+        <RouterProvider router={router} />
         <Invincibility />
         {context.state.isFooterLoaded === false && <div></div>}
         {context.state.isFooterLoaded === true && <Footer />}

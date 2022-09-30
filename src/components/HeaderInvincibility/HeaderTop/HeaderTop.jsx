@@ -24,7 +24,7 @@ export const HeaderTop = ({ data }) => {
                     <span>Слайдер</span>
                 </div>
             </div>
-            <div className={s.background} style={{ backgroundImage: `url("/invincibility/unionBgDark.png")` }}></div>
+            <div className={s.background} style={{ backgroundImage: `url("/invincibility/unionBg/unionBgDark.png")` }}></div>
         </div>
     );
 };

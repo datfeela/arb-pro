@@ -30,11 +30,14 @@
     background: $redColor;
     border-radius: 50%;
     position: relative;
-    top: -72px;
+    top: 0;
     z-index: 1;
+    transition: all 0.1s ease;
 
     @media (max-width: 900px) {
         max-width: 390px;
+        top: -72px;
+        transform: none !important;
     }
 
     @media (max-width: 768px) {
@@ -76,6 +79,11 @@
 .circleImg {
     position: relative;
     z-index: 1;
+    transition: all 0.1s ease;
+
+    @media (max-width: 900px) {
+        transform: none !important;
+    }
 
     @media (max-width: 600px) {
         padding-bottom: 175px;
@@ -83,8 +91,13 @@
 
     img {
         position: absolute;
-        top: 50px;
+        top: 0px;
         left: 0;
-    }
+        height: 325px;
+        width: 325px;
 
+        @media (max-width: 600px) {
+            left: calc(50% - 162px);
+        }
+    }
 }
