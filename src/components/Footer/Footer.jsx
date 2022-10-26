@@ -6,7 +6,7 @@ import { Contacts } from "./Contacts/Contacts";
 import { Docs } from "./Docs/Docs";
 import { Nav } from "./Nav/Nav";
 
-export const Footer = () => {
+export const Footer = ({ secondaryColor }) => {
     const data = useContext(AppContext).state.layouts.footer;
 
     return (
@@ -20,14 +20,14 @@ export const Footer = () => {
                 <div className={s.logoWrap}>
                     <SvgSelector type="footer-logo" />
                 </div>
-                <Docs docs={data.docs} />
+                <Docs docs={data.docs} color={secondaryColor} />
                 <span className={s.license}>{data.license.copyright}</span>
                 <a target="_blank" rel="noreferrer" className={s.link} href={data.license.privacy.link}>
                     <span className={s.license}>{data.license.privacy.title}</span>
                 </a>
             </div>
             <a href="#top">
-                <button className={s.scrollUpBtn}>
+                <button className={s.scrollUpBtn + (secondaryColor === "pink" ? " " + s.scrollUpBtn_pink : "")}>
                     <SvgSelector type="arrowLg" />
                 </button>
             </a>

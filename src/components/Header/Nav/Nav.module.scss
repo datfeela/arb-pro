@@ -1,5 +1,14 @@
 @import "var.scss";
 
+.navWrapFullWidth {
+    width: 100%;
+    margin: 0px 70px;
+
+    @media (max-width: 1500px) {
+        margin: 0 15px;
+    }
+}
+
 .nav {
     height: $headerHeight;
     display: flex;
@@ -15,8 +24,27 @@
         display: none;
     }
 
-    
     &_bright {
         border-bottom: 1px solid #353535;
+    }
+
+    &_withMidRes {
+        @media (max-width: 1500px) {
+            display: flex;
+            margin: 0 15px;
+        }
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    // if burger is inside nav
+    & > div {
+        margin-right: 30px;
+
+        @media (max-width: 1500px) {
+            display: none;
+        }
     }
 }

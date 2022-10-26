@@ -5,11 +5,13 @@ const defaultState = {
     isHeaderLoaded: false,
     isStrategyLayoutLoaded: false,
     isInvincibilityLayoutLoaded: false,
+    isbasicStrategiesRecordsSaleLayoutLoaded: false,
     layouts: {
         header: null,
         footer: null,
         strategy: null,
-        invincibility: null
+        invincibility: null,
+        basicStrategiesRecordsSale: null
     }
 };
 
@@ -20,9 +22,11 @@ const stateReducer = (state, action) => {
         case 'setHeader':
             return { ...state, layouts: { ...state.layouts, header: action.data }, isHeaderLoaded: true };
         case 'setStrategyLayout':
-            return { ...state, layouts: { ...state.layouts, strategy: action.data}, isStrategyLayoutLoaded: true };
+            return { ...state, layouts: { ...state.layouts, strategy: action.data }, isStrategyLayoutLoaded: true };
         case 'setInvincibilityLayout':
             return { ...state, layouts: { ...state.layouts, invincibility: action.data }, isInvincibilityLayoutLoaded: true };
+        case 'setBasicStrategiesRecordsSale':
+            return { ...state, layouts: { ...state.layouts, basicStrategiesRecordsSale: action.data }, isbasicStrategiesRecordsSaleLayoutLoaded: true }
         default:
             throw new Error('wrong action type');
     }

@@ -1,6 +1,7 @@
 @import "var.scss";
 
 .wrap {
+    height: 100%;
     display: flex;
     align-items: center;
 }
@@ -27,6 +28,29 @@
     padding: 20px 0;
     border-radius: 0 0 0 10px;
     overflow: hidden;
+
+    @media (max-width: 1120px) {
+        padding: 12px 0;
+        width: 192px;
+        height: 100%;
+    }
+
+    @media (max-width: 768px) {
+        padding: 10px 0;
+        width: 160px;
+
+        span {
+            font-size: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        width: unset;
+        padding: 0;
+        span {
+            display: none;
+        }
+    }
 
     &::after {
         content: "";
@@ -55,31 +79,13 @@
         line-height: 125%;
     }
 
-    &_bright {
+    &_pink {
+        background: $pinkColor;
+    }
+
+    &_hoverBright {
         &::after {
             background: $brightGreenColor;
-        }
-    }
-
-    @media (max-width: 1120px) {
-        padding: 12px 0;
-        width: 192px;
-    }
-
-    @media (max-width: 768px) {
-        padding: 10px 0;
-        width: 160px;
-
-        span {
-            font-size: 15px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        width: unset;
-        padding: 0;
-        span {
-            display: none;
         }
     }
 }

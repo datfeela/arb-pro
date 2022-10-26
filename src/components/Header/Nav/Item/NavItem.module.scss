@@ -23,6 +23,18 @@
         }
     }
 
+    &_hoverPink {
+        &:hover {
+            .link {
+                color: $pinkColor;
+
+                &::before {
+                    background-color: $pinkColor;
+                }
+            }
+        }
+    }
+
     &_empty {
         &:hover {
             .link {
@@ -30,6 +42,21 @@
 
                 &::before {
                     transform: translateY(-6px);
+                }
+            }
+        }
+    }
+
+    &_withMidRes {
+        .link {
+            @media (max-width: 1350px) {
+                font-size: 14px;
+                line-height: 140%;
+            }
+
+            @media (max-width: 1120px) {
+                &::before{
+                    display: none;
                 }
             }
         }
@@ -44,6 +71,7 @@
     margin: 0 1em;
     color: $darkGreenColor;
     transition: all 0.5s ease;
+    text-align: center;
 
     &::before {
         content: "";

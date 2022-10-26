@@ -2,21 +2,29 @@
     "nav": [
         {
             "id": 0,
-            "name": "Пункт первый",
-            "link": "https://arb-pro.ru/strategy/"
+            "name": "Отзывы",
+            "link": "#feedbackInvincibility"
         },
         {
             "id": 1,
-            "name": "Пункт второрй",
-            "link": "https://arb-pro.ru/finance/"
+            "name": "Бесплатные вебинары",
+            "link": "#webinarsInvincibility"
         },
         {
             "id": 2,
-            "name": "Пункт третий",
-            "link": "https://arb-pro.ru/marketing/"
+            "name": "Формат обучения",
+            "link": "#trainingPlanInvincibility"
         },
-        { "id": 3, "name": "Пункт четвертый", "link": "https://arb-pro.ru/technologies/" },
-        { "id": 4, "name": "Пункт пятый важный", "link": "https://arb-pro.ru/events/" }
+        {
+            "id": 3,
+            "name": "Расписание",
+            "link": "#scheduleInvincibility"
+        },
+        {
+            "id": 4,
+            "name": "Команда ",
+            "link": "#teamInvincibility"
+        }
     ],
     "menu": {
         "useful": {
@@ -79,7 +87,7 @@
         }
     },
     "form": {
-        "title": "Заказать обратный звонок",
+        "title": "Оставить заявку",
         "fields": {
             "name": {
                 "placeholder": "Имя"
@@ -91,7 +99,8 @@
                 "placeholder": "Почта"
             },
             "message": {
-                "placeholder": "Сообщение"
+                "placeholder": "Сообщение",
+                "initialValue": "Хочу стать Несокрушимым"
             }
         },
         "submitBtn": "Перезвоните мне",

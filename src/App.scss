@@ -16,4 +16,16 @@ main {
     @media (max-width: 480px) {
         margin-top: $headerHeight480;
     }
+
+    &#basic {
+        margin-top: calc(#{$headerHeight} + 20px);
+
+        @media (max-width: 1120px) {
+            margin-top: calc(#{$headerHeight1120} + 11px);
+        }
+
+        @media (max-width: 480px) {
+            margin-top: $headerHeight480;
+        }
+    }
 }

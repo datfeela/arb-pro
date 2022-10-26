@@ -1,9 +1,10 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import s from "./ContactUs.module.scss";
 import { AppContext } from "../../context";
 import { ArticleTitle } from "../_generic/ArticleTitle/ArticleTitle";
 import { PopupFullScreen } from "../_generic/PopupFullScreen/PopupFullScreen";
 import { ContactForm } from "../_generic/ContactForm/ContactForm";
+import { usePopup } from "../../hooks/usePopup";
 
 export const ContactUs = () => {
     const yaMetricsFn = () => {
@@ -13,22 +14,8 @@ export const ContactUs = () => {
 
     const data = useContext(AppContext).state.layouts.strategy.contact;
 
-    const [isPopupActive, setIsPopupActive] = useState(false);
-
-    const activatePopup = () => {
-        setIsPopupActive(true);
-    };
-
-    const deactivatePopup = () => {
-        setIsPopupActive(false);
-    };
-
-    const initialFormValues = {title_form: data.title[0].text, name: "", phone: "", email: "", message: ""};
-
-    const submitForm = (values) => {
-        setIsPopupActive(false);
-        alert("Заявка отправлена");
-    };
+    // form popup
+    const [isPopupActive, activatePopup, deactivatePopup] = usePopup();
 
     return (
         <div className={s.wrap + " wrap"}>
@@ -52,12 +39,11 @@ export const ContactUs = () => {
             </div>
             <PopupFullScreen isPopupActive={isPopupActive} deactivatePopup={deactivatePopup}>
                 <ContactForm
-                    title={data.title[0].text}
+                    title={data.form.title}
                     fields={data.form.fields}
                     btnText={data.form.submitBtn}
                     submitDesc={data.form.submitDesc}
-                    submitForm={submitForm}
-                    initialFormValues={initialFormValues}
+                    onFormSubmit={deactivatePopup}
                     yaMetricsFn={yaMetricsFn}
                 />
             </PopupFullScreen>

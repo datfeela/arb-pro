@@ -16,28 +16,42 @@
     @media (max-width: 480px) {
         font-size: $titleFont480;
     }
-}
 
-.titleMd {
-    font-size: $titleMdFont;
-    font-weight: 600;
-    line-height: 125%;
+    &_md {
+        font-size: $titleMdFont;
 
-    @media (max-width: 1120px) {
-        font-size: $titleMdFont1120;
+        @media (max-width: 1120px) {
+            font-size: $titleMdFont1120;
+        }
+
+        @media (max-width: 768px) {
+            font-size: $titleMdFont768;
+        }
+
+        @media (max-width: 480px) {
+            font-size: $titleMdFont480;
+        }
     }
 
-    @media (max-width: 768px) {
-        font-size: $titleMdFont768;
-    }
+    &_sm {
+        font-size: $titleSmFont;
 
-    @media (max-width: 480px) {
-        font-size: $titleMdFont480;
+        @media (max-width: 1120px) {
+            font-size: $titleSmFont1120;
+        }
+
+        @media (max-width: 768px) {
+            font-size: $titleSmFont768;
+        }
+
+        @media (max-width: 480px) {
+            font-size: $titleSmFont480;
+        }
     }
 }
 
 .wrap {
-    max-width: 1936px;
+    max-width: 1920px;
     margin: 0 auto;
 }
 

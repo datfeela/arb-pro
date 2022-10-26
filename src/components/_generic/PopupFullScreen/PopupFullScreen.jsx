@@ -5,10 +5,19 @@ import s from "./PopupFullScreen.module.scss";
 export const PopupFullScreen = (props) => {
     const closeBtnRef = useRef();
 
-    // useEffect(() => {
-    //     if (props.isPopupActive) document.querySelector("html").style.overflowY = "hidden";
-    //     else document.querySelector("html").style.overflowY = "scroll";
-    // }, [props.isPopupActive]);
+    useEffect(() => {
+        const bodyRef = document.body;
+        const headerRef = document.querySelector("header") && document.querySelector("header").firstChild; //todo: fix this with state
+
+        if (props.isPopupActive && !bodyRef.classList.contains("no-scroll")) {
+            bodyRef.classList.add("no-scroll");
+            headerRef.classList.add("header-no-scroll"); //and this
+        }
+        if (!props.isPopupActive && bodyRef.classList.contains("no-scroll")) {
+            bodyRef.classList.remove("no-scroll");
+            headerRef.classList.remove("header-no-scroll"); //and this, then remove styles from global and move to header module
+        }
+    }, [props.isPopupActive]);
 
     const handleClick = (e) => {
         closeBtnRef.current.contains(e.target) && props.deactivatePopup();

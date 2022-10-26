@@ -2,6 +2,10 @@ import styled from "styled-components";
 import { Theme } from "../../../assets/styled/theme";
 
 export const ArticleTitle = ({ title, ...props }) => {
+    let titleClass = "title";
+    if (props.size === 'medium') titleClass += " title_md";
+    if (props.size === 'small') titleClass += " title_sm";
+
     const titleText =
         title && title[0]
             ? title.map((item, index) => {
@@ -15,8 +19,9 @@ export const ArticleTitle = ({ title, ...props }) => {
                   );
               })
             : "";
-
-    return <h2 className={props.size === "medium" ? "titleMd" : "title"}>{titleText}</h2>;
+    
+    if (props.h1) return <h1 className={titleClass}>{titleText}</h1>;
+    return <h2 className={titleClass}>{titleText}</h2>;
 };
 
 const Span = styled.span`
@@ -29,5 +34,7 @@ const Span = styled.span`
             ? `${Theme.darkGreenColor}`
             : props.color === "lightGreen"
             ? `${Theme.lightGreenColor}`
+            : props.color === "pink"
+            ? `${Theme.pinkColor}`
             : `${Theme.fontColor}`};
 `;

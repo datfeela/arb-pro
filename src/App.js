@@ -1,25 +1,18 @@
 import "./App.scss";
-import { useContext, useEffect } from 'react';
-import { Footer } from './components/Footer/Footer';
-import { AppContext } from './context';
 import { Strategy } from "./pages/Strategy";
-import { createBrowserRouter, Route, RouterProvider, Routes } from "react-router-dom";
-import { getFooter } from "./api/api";
 import { Invincibility } from "./pages/Invincibility";
+import { BasicStrategiesRecordsSale } from "./pages/BasicStrategiesRecordsSale";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 
 function App() {
-  const context = useContext(AppContext);
+  // todo0: optimize invincibility, LAZYLOAD for videos
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await getFooter();
-      context.dispatch({ type: 'setFooter', data: response });
-    };
-    fetchData();
-  }, []);
-
-  // todo: add errorElements for routes
-  // todo: fix date dependencies(where it's needed)
+  // todo1: add errorElements for routes when router is added to app
+  // todo2: fix data dependencies(where it's needed), {data && <block/>}
+  // ! check again after updating blocks
+  // todo3: ask if "form popup" form_title is needed to post
+  // todo: осталось добавить логику блоку "Расписание бесплатных вебинаров", сделать слайдер в блоке "Кто уже стал несокрушимым",  добавить везде корректные ссылки и поменять в формах поля на необходимые/Нужны данные для всего этого
 
   const router = createBrowserRouter([
     {
@@ -30,15 +23,19 @@ function App() {
       path: "/strategy",
       element: <Strategy />,
     },
+    {
+      path: "/basic",
+      element: <BasicStrategiesRecordsSale />
+    }
   ]);
 
   return (
     <>
       <div className="App">
-        <RouterProvider router={router} />
-        <Invincibility />
-        {context.state.isFooterLoaded === false && <div></div>}
-        {context.state.isFooterLoaded === true && <Footer />}
+        {/* <RouterProvider router={router} /> */}
+        {/* <Invincibility /> */}
+        {/* <Strategy/> */}
+        <BasicStrategiesRecordsSale />
       </div>
     </>
   );

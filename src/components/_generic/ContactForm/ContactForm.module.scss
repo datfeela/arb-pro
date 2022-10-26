@@ -18,6 +18,51 @@
         width: 280px;
         padding: 30px;
     }
+
+    // form_invincibility
+
+    &_invincibility {
+        padding: 0 15px;
+        width: 100%;
+        margin: 0;
+
+        @media (max-width: 768px) {
+            padding: 0 15px;
+        }
+
+        @media (max-width: 680px) {
+            width: 100%;
+        }
+
+        @media (max-width: 540px) {
+            width: 100%;
+            padding: 0 15px;
+        }
+
+        .inputs {
+            margin-bottom: 50px;
+
+            @media (max-width: 1120px) {
+                margin-bottom: 25px;
+            }
+
+            @media (max-width: 768px) {
+                margin-bottom: 20px;
+            }
+        }
+
+        .inputWrap {
+            height: 67px;
+
+            @media (max-width: 768px) {
+                height: 57px;
+            }
+
+            @media (max-width: 680px) {
+                height: 47px;
+            }
+        }
+    }
 }
 
 .title {
@@ -80,6 +125,21 @@
     }
 }
 
+.iconWrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 768px) {
+        width: 32px;
+    }
+}
+
 .errorWrapAbsolute {
     position: absolute;
     right: 0;
@@ -93,5 +153,63 @@
     @media (max-width: 540px) {
         height: 45px;
         margin: 15px 0 0 0;
+    }
+}
+
+.formSubmit {
+    margin-bottom: 80px;
+
+    &__checkbox {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 1120px) {
+        margin-bottom: 45px;
+    }
+
+    @media (max-width: 768px) {
+        margin-bottom: 30px;
+    }
+
+    @media (max-width: 480px) {
+        margin-bottom: 0;
+    }
+}
+
+.checkbox {
+    width: 21px;
+    min-width: 21px;
+    height: 21px;
+    border: 2px solid $darkGreenColor;
+
+    svg {
+        display: none;
+    }
+
+    &_checked {
+        background: $darkGreenColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            display: block;
+        }
+    }
+
+    &_default {
+        display: none;
+    }
+}
+
+.agreementError {
+    color: $redColor;
+    font-size: 15px;
+    line-height: 150%;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
     }
 }

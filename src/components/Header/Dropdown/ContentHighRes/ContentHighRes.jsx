@@ -3,7 +3,7 @@ import { setBlockHeight } from "../../../../assets/utils/setBlockHeight";
 import { SvgSelector } from "../../../_generic/SvgSelector/SvgSelector";
 import s from "./ContentHighRes.module.scss";
 
-export const ContentHighRes = ({ isBurgerActive, usefulList, aboutList, contacts, color }) => {
+export const ContentHighRes = ({ isBurgerActive, isWithMidResolution, isWithLowResolution, usefulList, aboutList, contacts, color }) => {
     const usefulItems = usefulList.items.map((item, index) => (
         <li className={item.icon ? s.item + " " + s.item_withIcon : s.item} key={index}>
             <a href={item.link} className={s.link}>
@@ -33,7 +33,15 @@ export const ContentHighRes = ({ isBurgerActive, usefulList, aboutList, contacts
     }, [isBurgerActive]);
 
     return (
-        <div ref={contentRef} className={s.wrapAbsolute + (color === "brightGreen" ? " " + s.wrapAbsolute_bright : "")}>
+        <div
+            ref={contentRef}
+            className={
+                s.wrapAbsolute +
+                (color === "brightGreen" ? " " + s.wrapAbsolute_bright : "") +
+                (isWithMidResolution ? " " + s.wrapAbsolute_withMidRes : "") +
+                (isWithLowResolution ? " " + s.wrapAbsolute_withLowRes : "")
+            }
+        >
             <div className={s.wrap}>
                 <div className={s.listWrap + " " + s.listWrap_useful}>
                     <h3 className={s.title}>{usefulList.title}</h3>

@@ -40,7 +40,7 @@ export const HeaderBot = ({ data }) => {
                     {listItems}
                 </ul>
             </div>
-            <div className={s.background} style={{ backgroundImage: `url("/invincibility/unionBg/unionBg.png")` }}></div>
+            <div className={s.background} style={{ backgroundImage: `url("invincibility/unionBg/unionBg.png")` }}></div>
         </div>
     );
 };

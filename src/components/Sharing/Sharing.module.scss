@@ -30,9 +30,9 @@
     background: $redColor;
     border-radius: 50%;
     position: relative;
-    top: 0;
+    top: -72px;
     z-index: 1;
-    transition: all 0.1s ease;
+    transition: all 1s ease;
 
     @media (max-width: 900px) {
         max-width: 390px;
@@ -79,7 +79,8 @@
 .circleImg {
     position: relative;
     z-index: 1;
-    transition: all 0.1s ease;
+    transition: all 1s ease;
+    top: 40px;
 
     @media (max-width: 900px) {
         transform: none !important;

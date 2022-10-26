@@ -1,0 +1,10 @@
+.wrap{
+    position: absolute;
+    z-index: 0;
+    right: 209px;
+    top: 209px;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}

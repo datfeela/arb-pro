@@ -3,7 +3,6 @@
 .wrapAbsolute {
     width: 100%;
     position: relative;
-    top: $headerHeight;
     left: 0;
     background: $darkGreenColor;
     overflow: hidden;
@@ -12,6 +11,19 @@
 
     @media (max-width: 1500px) {
         display: none;
+    }
+
+    &_withMidRes {
+        @media (max-width: 1500px) {
+            display: block;
+        }
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    &_withLowRes {
+        display: block !important;
     }
 
     &_bright {
@@ -25,18 +37,22 @@
     margin: 0 auto;
     padding: 25px 100px;
     display: grid;
-    grid-template-columns: 360px 305px auto;
+    grid-template-columns: 7fr 6fr 7fr;
 
-    @media (max-width: 1120px) {
-        top: $headerHeight1120;
+    @media (max-width: 1200px) {
+        grid-template-columns: 8fr 6fr 7fr;
+    }
+
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+        padding: 25px 40px;
     }
 
     @media (max-width: 768px) {
-        top: $headerHeight768;
-    }
-
-    @media (max-width: 480px) {
-        top: $headerHeight480;
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+        padding: 20px 25px;
     }
 }
 
@@ -115,6 +131,14 @@
     font-weight: 600;
     line-height: 130%;
 
+    @media (max-width: 1200px) {
+        font-size: 25px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
+
     &:hover {
         color: $brightGreenColor;
     }
@@ -124,6 +148,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 1200px) {
+        max-width: 270px;
+    }
+
+    @media (max-width: 480px) {
+        gap: 25px;
+        justify-content: start;
+    }
 }
 
 .linkSocial {
@@ -136,6 +169,10 @@
             &:hover {
                 fill: $brightGreenColor;
             }
+
+            @media (max-width: 480px) {
+                max-width: 22px;
+            }
         }
     }
 
@@ -143,6 +180,10 @@
         svg {
             &:hover {
                 fill: #35acf1;
+            }
+
+            @media (max-width: 480px) {
+                max-width: 22px;
             }
         }
     }
@@ -152,6 +193,10 @@
             &:hover {
                 fill: $lightRedColor;
             }
+
+            @media (max-width: 480px) {
+                max-width: 25px;
+            }
         }
     }
 
@@ -159,6 +204,10 @@
         svg {
             &:hover {
                 fill: #4081ff;
+            }
+
+            @media (max-width: 480px) {
+                max-width: 34px;
             }
         }
     }

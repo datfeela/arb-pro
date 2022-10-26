@@ -4,72 +4,40 @@
     position: fixed;
     z-index: 10;
     top: 0;
-    right: $scrollbarWidth;
-    width: 100vw;
-    height: $headerHeight;
+    width: 100%;
     display: flex;
     justify-content: center;
-
-    @media (max-width: 1120px) {
-        right: $scrollbarWidth1120;
-        padding-left: calc(#{$scrollbarWidth1120});
-    }
-    @media (max-width: 768px) {
-        right: $scrollbarWidth768;
-        padding-left: calc(#{$scrollbarWidth768});
-    }
 }
 
 .content {
-    max-width: calc(1920px + #{$scrollbarWidth});
-    width: calc(100% + #{$scrollbarWidth});
-    margin-left: $scrollbarWidth;
-    padding-left: 40px;
+    max-width: 1920px;
     width: 100%;
+    padding-left: $pagePadding;
     display: flex;
     justify-content: space-between;
     position: fixed;
     background: #fff;
 
-    &_transparent{
-        background: transparent;
+    &_invin {
+        background: #0f0f0e;
     }
 
-    @media (min-width: 1936px) and (max-width: 1952px) {
-        margin-left: calc(100vw - 1936px);
-    }
+    &_basic {
+        background: #f5f6fb;
+        align-items: flex-start;
 
-    @media (max-width: 1936px) {
-        margin-left: 0;
-    }
+        @media (max-width: 1120px) {
+            align-items: center;
+            height: 55px;
+        }
 
-    @media (max-width: 1120px) {
-        width: calc(100% - #{$scrollbarWidth1120});
-    }
-
-    @media (max-width: 768px) {
-        width: calc(100% - #{$scrollbarWidth768});
-        padding-left: $pagePadding;
+        @media (max-width: 480px) {
+            align-items: center;
+            height: $headerHeight480;
+        }
     }
 
     @media (max-width: 480px) {
         padding-left: $pagePadding480;
-    }
-}
-
-.leftSide {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    width: 142px;
-    margin-right: 28px;
-    display: flex;
-    align-items: center;
-
-    @media (max-width: 480px) {
-        width: 100px;
-        margin-right: 16px;
     }
 }

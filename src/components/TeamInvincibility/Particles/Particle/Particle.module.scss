@@ -1,0 +1,46 @@
+@import "var.scss";
+
+.wrap{
+    transition: all 0.8s ease 0s;
+}
+
+.particle {
+    height: 14px;
+    width: 14px;
+    // transition: all 0.2s ease 0s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.rhomb {
+    transform: rotate(45deg);
+}
+
+.rectangleX {
+    width: 28px;
+}
+
+.rectangleY {
+    height: 28px;
+}
+
+.green {
+    background: $darkGreenColor;
+}
+
+.red {
+    background: $redColor;
+}
+
+.grey {
+    background: #ecf0f3;
+}
+
+.white {
+    background: #fff;
+}

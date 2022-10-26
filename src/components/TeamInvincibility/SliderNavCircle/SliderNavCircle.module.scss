@@ -1,0 +1,120 @@
+@import "var.scss";
+
+.circle {
+    position: absolute;
+    width: 418px;
+    height: 418px;
+    background: $redColor;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    border-radius: 50%;
+
+    @media (max-width: 1120px) {
+        height: 330px;
+        width: 330px;
+    }
+
+    @media (max-width: 900px) {
+        height: 280px;
+        width: 280px;
+    }
+
+    @media (max-width: 768px) {
+        z-index: 5;
+        left: 220px;
+        top: 142px;
+        height: 58px;
+        width: 154px;
+        border-radius: 29px;
+    }
+
+    @media (max-width: 480px) {
+        left: 140px;
+        top: 67px;
+    }
+}
+
+.navAbsoluteWrap {
+    position: absolute;
+    z-index: 5;
+    top: 330px;
+    right: 0;
+    height: 0px;
+    width: 418px;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 1120px) {
+        width: 330px;
+        top: 260px;
+    }
+
+    @media (max-width: 900px) {
+        width: 280px;
+        top: 215px;
+    }
+
+    @media (max-width: 768px) {
+        left: 220px;
+        top: 142px;
+        height: 58px;
+        width: 154px;
+        border-radius: 29px;
+    }
+
+    @media (max-width: 480px) {
+        left: 140px;
+        top: 67px;
+    }
+}
+
+.nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    @media (max-width: 1120px) {
+        gap: 10px;
+    }
+
+    @media (max-width: 768px) {
+        height: 58px;
+        width: 154px;
+        border-radius: 29px;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.navBtn {
+    height: 38px;
+    width: 44px;
+    padding: 10px;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.prevBtn {
+    &:hover {
+        transform: translateX(-3px);
+    }
+
+    @media (max-width: 768px) {
+        margin-left: 20px;
+    }
+}
+.nextBtn {
+    &:hover {
+        transform: translateX(3px);
+    }
+
+    svg {
+        transform: rotate(180deg);
+    }
+
+    @media (max-width: 768px) {
+        margin-right: 20px;
+    }
+}

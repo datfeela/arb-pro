@@ -4,7 +4,7 @@ import { setBlockHeight } from "../../../../assets/utils/setBlockHeight";
 import { SvgSelector } from "../../../_generic/SvgSelector/SvgSelector";
 import s from "./Search.module.scss";
 
-export const Search = ({ buttonText, inputPlaceholder, isSearchActive, toggleActivateSearch, color }) => {
+export const Search = ({ buttonText, inputPlaceholder, isSearchActive, toggleActivateSearch, color, secondaryColor }) => {
     const searchRef = useRef();
 
     useEffect(() => {
@@ -27,11 +27,15 @@ export const Search = ({ buttonText, inputPlaceholder, isSearchActive, toggleAct
                             <div className={s.inputWrap}>
                                 <Field type="text" name="search" placeholder={inputPlaceholder} component={RenderInput} />
                             </div>
-                            <button className={s.button + " formButton"} type="submit" disabled={isSubmitting}>
+                            <button
+                                className={s.button + " formButton" + (secondaryColor === "pink" ? " " + s.button_pink : "")}
+                                type="submit"
+                                disabled={isSubmitting}
+                            >
                                 <div className={s.button_icon}>
                                     <SvgSelector type="search" />
                                 </div>
-                                <span className={s.button_text}>{buttonText}</span>
+                                <span className={s.button__text}>{buttonText}</span>
                             </button>
                         </Form>
                     )}

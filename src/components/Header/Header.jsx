@@ -1,13 +1,13 @@
-import { useContext, useRef, useState } from "react";
+import { useContext, useState } from "react";
 import s from "./Header.module.scss";
 import { AppContext } from "../../context";
-import { Burger } from "../_generic/Burger/Burger";
-import { SvgSelector } from "../_generic/SvgSelector/SvgSelector";
 import { Actions } from "./Actions/Actions";
 import { Nav } from "./Nav/Nav";
 import { PopupFullScreen } from "../_generic/PopupFullScreen/PopupFullScreen";
 import { ContactForm } from "../_generic/ContactForm/ContactForm";
 import { Dropdown } from "./Dropdown/Dropdown";
+import { usePopup } from "../../hooks/usePopup";
+import { Left } from "./Left/Left";
 
 export const Header = ({ page }) => {
     const yaMetricsFn = () => {
@@ -18,81 +18,70 @@ export const Header = ({ page }) => {
     const data = useContext(AppContext).state.layouts.header;
 
     // is burger menu active
+
     const [isBurgerActive, setIsBurgerActive] = useState(false);
     const toggleActivateBurger = () => {
         setIsBurgerActive(!isBurgerActive);
     };
 
     // is search active
+
     const [isSearchActive, setIsSearchActive] = useState(false);
     const toggleActivateSearch = () => {
         setIsSearchActive(!isSearchActive);
     };
 
-    // popup form
+    // form popup
+
+
     const formData = data.form;
-    const [isPopupActive, setIsPopupActive] = useState(false);
-    const activatePopup = () => {
-        setIsPopupActive(true);
-    };
-    const deactivatePopup = () => {
-        setIsPopupActive(false);
-    };
+    console.log(formData);
+    const [isPopupActive, activatePopup, deactivatePopup] = usePopup();
 
-    const initialFormValues = {
-        title_form: formData.title,
-        name: "",
-        phone: "",
-        email: "",
-        message: "Добрый день! Я хочу понять, куда двигаться дальше, прописать стратегию и подробный план действий на несколько лет вперед",
-    };
-
-    const submitForm = (data) => {
-        if (data === "Y") {
-            setIsPopupActive(false);
-            alert("Заявка отправлена");
-        }
-    };
-
+    //
     const themeColor = page === "invincibility" && "brightGreen";
+    const secondaryColor = page === "basicStrategies" && "pink";
 
     return (
         <header className={s.headerFixed}>
-            <div className={s.content + (page === "invincibility" ? " " + s.content_transparent : "")}>
-                <div className={s.leftSide}>
-                    <a className={s.logo} href="https://arb-pro.ru/">
-                        <SvgSelector type={page === "invincibility" ? "headerLogoWhite" : "headerLogo"} />
-                    </a>
-                    <Burger color={themeColor} isBurgerActive={isBurgerActive} toggleActivate={toggleActivateBurger} />
-                </div>
-                <Nav color={themeColor} isBurgerActive={isBurgerActive} items={data.nav}></Nav>
+            <div className={s.content + (page === "invincibility" ? " " + s.content_invin : page === "basicStrategies" ? " " + s.content_basic : "")}>
+                <Left page={page} color={themeColor} isBurgerActive={isBurgerActive} toggleActivateBurger={toggleActivateBurger} />
+                <Nav
+                    page={page}
+                    color={themeColor}
+                    secondaryColor={secondaryColor}
+                    isBurgerActive={isBurgerActive}
+                    toggleActivateBurger={toggleActivateBurger}
+                    items={data.nav}
+                ></Nav>
                 <Actions
                     color={themeColor}
+                    secondaryColor={secondaryColor}
                     buttonText={data.buttonText}
                     activatePopup={activatePopup}
                     isSearchActive={isSearchActive}
                     toggleActivateSearch={toggleActivateSearch}
                 ></Actions>
+                <Dropdown
+                    page={page}
+                    secondaryColor={secondaryColor}
+                    isBurgerActive={isBurgerActive}
+                    usefulList={data.menu.useful}
+                    aboutList={data.menu.about}
+                    contacts={data.menu.contacts}
+                    isSearchActive={isSearchActive}
+                    toggleActivateSearch={toggleActivateSearch}
+                    searchBlockData={data.search}
+                    contentLowRes={data.nav}
+                />
             </div>
-            <Dropdown
-                color={themeColor}
-                isBurgerActive={isBurgerActive}
-                usefulList={data.menu.useful}
-                aboutList={data.menu.about}
-                contacts={data.menu.contacts}
-                isSearchActive={isSearchActive}
-                toggleActivateSearch={toggleActivateSearch}
-                searchBlockData={data.search}
-                contentLowRes={data.nav}
-            />
             <PopupFullScreen isPopupActive={isPopupActive} deactivatePopup={deactivatePopup}>
                 <ContactForm
                     title={formData.title}
                     fields={formData.fields}
                     btnText={formData.submitBtn}
                     submitDesc={formData.submitDesc}
-                    submitForm={submitForm}
-                    initialFormValues={initialFormValues}
+                    onFormSubmit={deactivatePopup}
                     yaMetricsFn={yaMetricsFn}
                 />
             </PopupFullScreen>

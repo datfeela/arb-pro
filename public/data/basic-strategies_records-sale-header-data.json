@@ -1,0 +1,114 @@
+{
+    "nav": [
+        {
+            "id": 0,
+            "name": "Видео конференции",
+            "link": "https://arb-pro.ru/strategy/"
+        },
+        {
+            "id": 1,
+            "name": "Презентации",
+            "link": "https://arb-pro.ru/finance/"
+        },
+        {
+            "id": 2,
+            "name": "О конференции",
+            "link": "https://arb-pro.ru/marketing/"
+        },
+        {
+            "id": 3,
+            "name": "Ответы на вопросы",
+            "link": "https://arb-pro.ru/technologies/"
+        }
+    ],
+    "menu": {
+        "useful": {
+            "title": "Полезности для вас",
+            "items": [
+                {
+                    "title": "Руководство по увеличению отдачи от активов",
+                    "link": "https://arb-pro.ru/finance/#guides"
+                },
+                {
+                    "title": "Презентации вебинаров",
+                    "link": "https://arb-pro.ru/events/"
+                },
+                {
+                    "title": "Видео вебинаров",
+                    "link": "https://arb-pro.ruhttps://www.youtube.com/user/TrainingInstARBPro/playlists"
+                },
+                {
+                    "title": "Исследования рынков в доступе",
+                    "link": "https://arb-pro.ru/research/"
+                },
+                {
+                    "title": "Примеры стратегий компаний",
+                    "link": "https://arb-pro.ru/strategy/"
+                }
+            ]
+        },
+        "about": {
+            "title": "О компании",
+            "items": [
+                {
+                    "title": "Миссия и ценности",
+                    "link": "https://arb-pro.ru/about-us/#mission"
+                },
+                {
+                    "title": "Подход",
+                    "link": "https://arb-pro.ru/about-us/"
+                },
+                {
+                    "title": "Команда",
+                    "link": "https://arb-pro.ru/about-us/#employees"
+                },
+                {
+                    "title": "Скачать буклет PDF",
+                    "link": "https://arb-pro.ru/upload/Buklet_ARB_Pro_2021.pdf",
+                    "icon": "pdf-down-transparent"
+                }
+            ]
+        },
+        "contacts": {
+            "title": "Контакты",
+            "phone": { "text": "+7 (812) 770-21-62", "link": "tel:+78127702162" },
+            "mail": { "text": "strategy@arb-pro.ru", "link": "mailto:strategy@arb-pro.ru" },
+            "socials": {
+                "WA": "https://wa.me/message/IVYD6GWSOPFYJ1",
+                "TG": "https://t.me/arb_pro",
+                "YT": "https://www.youtube.com/user/TrainingInstARBPro",
+                "VK": "https://vk.com/arbpro_consult"
+            }
+        }
+    },
+    "form": {
+        "title": "Заказать обратный звонок",
+        "fields": {
+            "name": {
+                "placeholder": "Имя"
+            },
+            "phone": {
+                "placeholder": "Телефон"
+            },
+            "email": {
+                "placeholder": "Почта"
+            },
+            "message": {
+                "placeholder": "Сообщение"
+            }
+        },
+        "submitBtn": "Перезвоните мне",
+        "submitDesc": {
+            "text": "Нажимая кнопку, принимаю условия ",
+            "link": {
+                "text": "политики и пользовательского соглашения",
+                "href": "https://arb-pro.ru/soglashenie/"
+            }
+        }
+    },
+    "buttonText": "Связаться с нами",
+    "search": {
+        "buttonText": "Искать",
+        "placeholder": "Что вы ищете?"
+    }
+}

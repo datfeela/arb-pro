@@ -1,15 +1,29 @@
 import s from "./SlideContent.module.scss";
 
-export const SlideContent = ({ title, desc, link, index, imgSrc }) => {
-
+export const SlideContent = ({ title, desc, id, imgSrc, videoSrc }) => {
     return (
         <div className={s.wrap}>
             <div className={s.video}>
-                <iframe title={`video${index}`} allowfullscreen="" allow="autoplay" src={link} class="youtube__media js-youtube-api"></iframe>
+                <iframe
+                    loading="lazy"
+                    title={`video${id}`}
+                    allowfullscreen=""
+                    scrolling="no"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    src={videoSrc}
+                    // srcdoc={`
+                    // <style>
+                    //     *{padding:0;margin:0;overflow:hidden}
+                    //     img{width: 100%; height: 100%}
+                    // </style>
+                    // <a href=${videoSrc}?autoplay=1>
+                    //     <img src=${imgSrc}>
+                    // </a>`}
+                ></iframe>
             </div>
             <div className={s.content}>
-                <span className={s.title}>{title}</span>
-                <span className={s.desc}>{desc}</span>
+                {title && <span className={s.title}>{title}</span>}
+                {desc && <span className={s.desc}>{desc}</span>}
             </div>
         </div>
     );

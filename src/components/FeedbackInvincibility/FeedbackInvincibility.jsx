@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Navigation, Thumbs } from "swiper";
 import "swiper/css";
 import { SlideContent } from "./SlideContent/SlideContent";
-import { SliderNav } from "./SlideContent/SliderNav/SliderNav";
+import { SliderNavCircle } from "./SliderNavCircle/SliderNavCircle";
 
 SwiperCore.use([Autoplay]);
 
@@ -20,12 +20,18 @@ export const FeedbackInvincibility = () => {
     items.forEach((slide, index) => {
         slides.push(
             <SwiperSlide key={slide.id}>
-                <SlideContent title={slide.title} desc={slide.desc} link={slide.link} id={index} imgSrc={`/invincibility/slider/${index}.jpg`} />
+                <SlideContent
+                    title={slide.title}
+                    desc={slide.desc}
+                    id={index}
+                    imgSrc={`https://i.ytimg.com/vi/${slide.videoId}/maxresdefault.jpg`}
+                    videoSrc={`https://www.youtube.com/embed/${slide.videoId}`}
+                />
             </SwiperSlide>
         );
         imageSlides.push(
             <SwiperSlide key={slide.id}>
-                <img className={s.previewImg} src={`/invincibility/slider/${index}.jpg`} alt="" />
+                <img className={s.previewImg} src={`invincibility/slider/${index}.jpg`} alt="" />
             </SwiperSlide>
         );
     });
@@ -33,7 +39,7 @@ export const FeedbackInvincibility = () => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
     return (
-        <div className={s.wrap + " wrap"}>
+        <div id="feedbackInvincibility" className={s.wrap + " wrap"}>
             <div className={"wrapInner"}>
                 <div className={s.titleWrap}>
                     <div className={s.icon}>
@@ -54,7 +60,7 @@ export const FeedbackInvincibility = () => {
                         navigation={true}
                     >
                         {slides}
-                        <SliderNav />
+                        <SliderNavCircle />
                     </Swiper>
                 </div>
                 <div className={s.sliderWrap}>

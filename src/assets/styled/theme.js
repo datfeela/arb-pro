@@ -2,6 +2,7 @@ export const Theme = {
     fontColor: '#2F2C27',
     redColor: '#D6001C',
     lightRedColor: '#F4364C',
+    pinkColor: '#D8055B',
     swampColor: '#A4BDBA',
     darkGreenColor: "#007367",
     greenColor: "#00ACA8",
@@ -9,9 +10,9 @@ export const Theme = {
 }
 
 export const Layout = {
-    scrollbarWidth: '16px',
-    scrollbarWidth1120: '16px',
-    scrollbarWidth768: '14px',
+    // scrollbarWidth: '16px',
+    // scrollbarWidth1120: '16px',
+    // scrollbarWidth768: '14px',
     maxContentWidth: '1680px',
     centerAreaMaxSize: '1200px',
     pagePadding: '22px',

@@ -3,6 +3,7 @@ import s from "./Inputs.module.scss";
 
 export const RenderInput = ({ form, field, ...props }) => {
     let classname = s.input;
+    if (props.isIcon === true) classname = classname + " " + s.input_withIconPadding;
     if (props.bg === "light") classname = classname + " " + s.input_light;
     if (props.errors && props.touched) classname = classname + " " + s.input_error;
     else if (field.value) classname = classname + " " + s.input_touched;

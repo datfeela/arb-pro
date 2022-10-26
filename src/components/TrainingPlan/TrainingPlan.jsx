@@ -11,7 +11,7 @@ export const TrainingPlan = () => {
     const blocks = items.map((item, index) => <TrainingPlanItem key={index} id={index} data={{ ...item }} />);
 
     return (
-        <div className={s.wrap + " wrap"}>
+        <div id="trainingPlanInvincibility" className={s.wrap + " wrap"}>
             <div className={"wrapInner"}>
                 <div className={s.header}>
                     <div className={s.title + " " + s.title_withBg}>

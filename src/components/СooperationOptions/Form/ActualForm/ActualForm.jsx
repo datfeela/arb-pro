@@ -6,6 +6,7 @@ import { WarningWithPopup } from "../../../_generic/WarningWithPopup/WarningWith
 import { isRequired, maxLength, minLength, validateName, validatePhone } from "../../../../assets/utils/formValidation";
 import { parseSpacebars } from "../../../../assets/utils/stringParser";
 import { RenderInput } from "../../../_generic/Inputs/Inputs";
+import { sendFormData } from "../../../../api/api";
 
 export const ActualForm = ({ fields, btnText, submitDesc, yaMetricsFn }) => {
     const data = useContext(AppContext).state.layouts.strategy.cooperation;
@@ -29,30 +30,10 @@ export const ActualForm = ({ fields, btnText, submitDesc, yaMetricsFn }) => {
         return error;
     };
 
-    // todo: split request from view
-
     async function submit(values, actions) {
-        yaMetricsFn();
-        let dataForm = new FormData();
-
-        for (let [name, value] of Object.entries(values)) {
-            dataForm.append(name, value);
-        }
-
-        await fetch("/ajax/landing_strategic.php", {
-            method: "POST",
-            headers: {
-                "X-Requested-With": "XMLHttpRequest",
-            },
-            body: dataForm,
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                if (data === "Y") {
-                    alert("Заявка отправлена");
-                }
-                actions.setSubmitting(false);
-            });
+        if (yaMetricsFn) yaMetricsFn();
+        await sendFormData({ values: values, endpoint: "/ajax/landing_strategic.php" });
+        actions.setSubmitting(false);
     }
 
     return (

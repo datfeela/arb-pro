@@ -1,5 +1,14 @@
 @import "var.scss";
 
+.wrapOuter {
+    overflow: hidden;
+    transition: all 0.5s ease;
+
+    &_overflow {
+        overflow: visible;
+    }
+}
+
 .wrap {
     display: none;
     width: 100%;
@@ -9,34 +18,27 @@
     height: 0px;
     transition: all 0.5s ease;
     padding-left: 40px;
-    margin-top: $headerHeight;
+    height: fit-content;
 
-    @media (max-width: 1120px) {
-        margin-top: $headerHeight1120;
+    @media (max-width: 1024px) {
+        display: block;
     }
 
     @media (max-width: 768px) {
         padding-left: $pagePadding;
-        margin-top: $headerHeight768;
     }
 
     @media (max-width: 480px) {
         padding-left: $pagePadding480;
-        margin-top: $headerHeight480;
     }
 
-    &_active {
-        height: 85vh;
-        border-bottom: 2px solid $swampColor;
+    &::-webkit-scrollbar {
+        width: 0;
+    }
 
-        @media (max-height: 850px) {
-            border-bottom: unset;
-            height: 100vh;
-            overflow-y: scroll;
-
-            &::-webkit-scrollbar {
-                width: 0;
-            }
+    &_withMidRes {
+        @media (max-width: 1500px) {
+            display: block !important;
         }
     }
 
@@ -44,14 +46,19 @@
         background: $brightGreenColor;
     }
 
+    &_active {
+        border-bottom: 2px solid $swampColor;
+        overflow-y: scroll;
+
+        @media (max-height: 850px) {
+            border-bottom: unset;
+        }
+    }
+
     a,
     span,
     h3 {
         color: #fff;
-    }
-
-    @media (max-width: 1500px) {
-        display: block;
     }
 }
 

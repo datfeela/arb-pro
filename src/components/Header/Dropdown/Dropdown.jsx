@@ -4,6 +4,7 @@ import s from "./Dropdown.module.scss";
 import { Search } from "./Search/Search";
 
 export const Dropdown = ({
+    page,
     isBurgerActive,
     usefulList,
     aboutList,
@@ -13,7 +14,12 @@ export const Dropdown = ({
     isSearchActive,
     toggleActivateSearch,
     color,
+    secondaryColor,
 }) => {
+    const IsLowResContentPresentForMidRes = page === "invincibility" || page === "basicStrategies";
+    const IsHighResContentPresentForMidRes = page === "invincibility" || page === "basicStrategies";
+    const IsHighResContentPresentForLowRes = page === "invincibility";
+
     return (
         <div className={s.wrap}>
             <Search
@@ -23,6 +29,7 @@ export const Dropdown = ({
                 isBurgerActive={isBurgerActive}
                 toggleActivateSearch={toggleActivateSearch}
                 color={color}
+                secondaryColor={secondaryColor}
             />
             <ContentHighRes
                 isSearchActive
@@ -31,11 +38,17 @@ export const Dropdown = ({
                 aboutList={aboutList}
                 contacts={contacts}
                 color={color}
+                isWithMidResolution={IsHighResContentPresentForMidRes}
+                isWithLowResolution={IsHighResContentPresentForLowRes}
             />
-            <ContentLowRes
-                items={contentLowRes} 
-                isBurgerActive={isBurgerActive}
-                color={color} />
+            {page !== "invincibility" && (
+                <ContentLowRes
+                    items={contentLowRes}
+                    isBurgerActive={isBurgerActive}
+                    color={color}
+                    isWithMidResolution={IsLowResContentPresentForMidRes}
+                />
+            )}
         </div>
     );
 };

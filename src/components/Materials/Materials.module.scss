@@ -1,0 +1,99 @@
+@import "var.scss";
+
+.wrap {
+    position: relative;
+    background: #262626;
+    padding: 80px 0;
+
+    @media (max-width: 1120px) {
+        padding: 55px 0;
+    }
+
+    @media (max-width: 768px) {
+        padding: 40px 0;
+    }
+
+    @media (max-width: 480px) {
+        padding: 30px 0;
+    }
+}
+
+.wrapInner {
+    display: flex;
+    gap: 200px;
+
+    @media (max-width: 1120px) {
+        gap: 80px;
+    }
+
+    @media (max-width: 768px) {
+        gap: 60px;
+        flex-direction: column;
+    }
+}
+
+.content {
+}
+
+.title {
+    font-weight: 600;
+    font-size: $subtitleFont;
+    line-height: 161%;
+    color: #fff;
+    margin-bottom: 30px;
+
+    @media (max-width: 768px) {
+        font-size: $subtitleFont1120;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: $subtitleFont480;
+    }
+}
+
+.desc {
+    display: flex;
+    gap: 30px;
+
+    @media (max-width: 768px) {
+        gap: 20px;
+    }
+
+    span {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 161%;
+        color: #a5a6a8;
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+    svg {
+        width: 20px;
+        min-width: 20px;
+        height: 28px;
+        margin-top: 10px;
+    }
+}
+
+.animationWrap {
+    width: 100%;
+
+    svg {
+        min-width: 350px;
+
+        @media (max-width: 900px) {
+            min-width: 280px;
+        }
+
+        @media (max-width: 768px) {
+            min-width: unset;
+            max-width: 400px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}

@@ -4,10 +4,12 @@ import { SvgSelector } from "../../../_generic/SvgSelector/SvgSelector";
 import { Dropdown } from "./Dropdown/Dropdown";
 import s from "./NavItem.module.scss";
 
-export const NavItem = ({ item, color }) => {
+export const NavItem = ({ item, color, secondaryColor, isWithMidResolution }) => {
     let itemClass = s.item;
     if (item.list) itemClass += " " + s.item_withSublist;
     else itemClass += " " + s.item_empty;
+    if (secondaryColor === "pink") itemClass += " " + s.item_hoverPink;
+    if (isWithMidResolution) itemClass += " " + s.item_withMidRes;
 
     const contentRef = useRef();
 

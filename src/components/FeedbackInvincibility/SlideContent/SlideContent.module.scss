@@ -26,12 +26,17 @@
     }
 }
 
+.img {
+    height: 100%;
+    width: 100%;
+}
+
 .content {
 }
 
 .title {
     display: block;
-    color: #333333;
+    color: $darkGreyFontColor;
     font-weight: 600;
     font-size: 26px;
     line-height: 133.4%;
@@ -44,7 +49,7 @@
 }
 
 .desc {
-    color: #333333;
+    color: $darkGreyFontColor;
     font-weight: 500;
     font-size: 16px;
     line-height: 133.4%;

@@ -3,7 +3,6 @@
 .wrap {
     width: 100%;
     position: relative;
-    top: $headerHeight;
     background-color: $darkGreenColor;
     overflow: hidden;
     height: 0px;
@@ -15,17 +14,14 @@
     }
 
     @media (max-width: 1120px) {
-        top: $headerHeight1120;
         padding-left: 40px;
     }
 
     @media (max-width: 768px) {
-        top: $headerHeight768;
         padding-left: $pagePadding;
     }
 
     @media (max-width: 480px) {
-        top: $headerHeight480;
         padding-left: $pagePadding480;
     }
 
@@ -131,6 +127,25 @@
     height: 52px;
     margin: 0;
 
+    @media (max-width: 768px) {
+        width: 44px;
+        height: 44px;
+        border-radius: 3px;
+    }
+
+    @media (max-width: 540px) {
+        width: 40px;
+        height: 40px;
+    }
+    @media (max-width: 420px) {
+        width: 34px;
+        height: 34px;
+    }
+
+    &_pink {
+        background: $pinkColor;
+    }
+
     &_icon {
         display: none;
 
@@ -146,25 +161,10 @@
         }
     }
 
-    &_text {
+    &__text {
         @media (max-width: 768px) {
             display: none;
         }
-    }
-
-    @media (max-width: 768px) {
-        width: 44px;
-        height: 44px;
-        border-radius: 3px;
-    }
-
-    @media (max-width: 540px) {
-        width: 40px;
-        height: 40px;
-    }
-    @media (max-width: 420px) {
-        width: 34px;
-        height: 34px;
     }
 }
 
